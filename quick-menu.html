@@ -1,0 +1,154 @@
+<%
+	'저장된 대분류 GET
+	sql = " SELECT cd_nm2, url, src_img "
+	sql = sql & " FROM TB_BASE "
+	sql = sql & " WHERE use_yn = 'Y' "
+	sql = sql & " AND menu_gubun = '0'"
+	sql = sql & " AND cd_nm1 = '대분류' "
+	Set cateDB = db.execute(sql)
+	If Not(cateDB.EOF Or cateDB.BOF) Then 
+		arrTmp = cateDB.GetRows()
+	End If
+	cateDB.close
+%>
+<div class="scroll-menu-area">
+	<div class="scroll-btn solution">        
+		<a href="#none" class="show-the-menu"></a>
+	</div>
+	<div class="scroll-menu" style="overflow: hidden;">
+		   <!-- Swiper  :  세로 스크롤 이동메뉴  -->
+		<div class="swiper verticalSwiper solution">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><a href="/main.html"><img src="/images/cateAll_icon_2.png" alt=""></a>전체</div>
+<%
+		If IsArray(arrTmp) Then
+			For i = 0 To UBound(arrTmp,2)
+				cd_nm2 = arrTmp(0,i)
+				url = arrTmp(1,i)
+				src_img = arrTmp(2,i)
+%>
+				<div class="swiper-slide"><a href="<%=url%>"><img src="/images/<%=src_img%>" alt=""></a><%=cd_nm2%></div>
+<%
+			Next
+		End If
+%>
+
+				<!--
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateCosmetic_icon_2.png" alt=""></a>화장품</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateBeauty_icon_2.png" alt=""></a>미용</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateStock_icon_2.png" alt=""></a>주식</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateLoan_icon_2.png" alt=""></a>대출</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateInsurance_icon_2.png" alt=""></a>보험</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateForeign_icon_2.png" alt=""></a>외국어</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateSelf_icon_2.png" alt=""></a>자기계발</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateInfant_icon_2.png" alt=""></a>유아학습</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateParenting_icon_2.png" alt=""></a>육아</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateMarriage_icon_2.png" alt=""></a>결혼</div>
+				<div class="swiper-slide"><a href="#none"><img src="/images/cateLove_icon_2.png" alt=""></a>연애</div>
+				-->
+			</div>
+		</div>        
+	</div>
+</div> <!--// scroll-menu-area -->
+<!--<div class="scroll-menu-modal"></div>-->
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- 세로 스크롤 이동메뉴 : Swiper -->
+<script>
+	var swiper = new Swiper(".verticalSwiper", {
+	slidesPerView: 5, //5개 보이게 하기
+	spaceBetween: 0,
+	freeMode: true,
+	direction: 'vertical' // 세로정렬
+	});
+</script>
+
+
+<!-- 세로스크롤 이동메뉴 : 위치이동 -->
+<script>
+/****  스크롤 이동 시 위치이동  ****/
+$(window).scroll(function(){
+	if($(window).scrollTop() > 500) { //윈도우 스크롤 500이상 내려갈때, 버튼보이기
+		$('.scroll-menu-area').addClass('active');
+	}
+	else {
+		$('.scroll-menu-area').removeClass('active');
+	}
+})
+/* tab key move */
+/*	var App = {
+		accessibleMenu: function(){
+			$qBtn = $('.show-the-menu');
+
+			$subMenu = $('.scroll-menu');
+			$subMenuSwiper = $subMenu.find('.swiper');
+			$subMenuItem = $subMenu.find('.swiper-slide > a');
+			$submenuLastItem = $subMenu.find('.swiper-slide:last-child > a');
+			$modalBg = $('.scroll-menu-modal');
+
+			$qBtn.bind({
+				focus: function(){
+					$subMenu.addClass('active');
+					$subMenuSwiper.addClass('active');
+					$modalBg.addClass('active');
+				},
+				blur: function(){
+					$subMenu.removeClass('active');
+					$subMenuSwiper.removeClass('active');
+					$modalBg.removeClass('active');
+				}
+			});
+
+			$subMenuItem.bind({
+				focus: function(){
+					$(this).parent().parent().parent().parent().addClass('active');
+					$subMenuSwiper.addClass('active');
+					$modalBg.addClass('active');
+				}
+			});
+
+			$submenuLastItem.bind({
+				blur: function(){
+					$subMenu.removeClass('active');
+					$subMenuSwiper.removeClass('active');
+					$modalBg.removeClass('active');
+				}
+			});
+		},
+
+		cancelAccessibleMenu: function(){
+			$(document).click(function(){
+				if($subMenu.hasClass('active')){
+					$subMenu.removeClass('active');
+					$modalBg.removeClass('active');
+				}
+			});
+		}
+	};
+
+	$(function(){
+		App.accessibleMenu();
+		App.cancelAccessibleMenu();
+	});	*/
+	
+ /****  버튼 클릭 시 카테고리 메뉴버튼 보이기   ****/
+$('.show-the-menu').click(function(){
+	$('.scroll-menu').toggleClass('active');
+	$('.verticalSwiper').toggleClass('active');
+	//$('.scroll-menu-modal').toggleClass('active'); // 탭메뉴로 화면너비 좁아질때-->(1200px) 배경 어둡게, 터치안되게 적용하기
+	
+	 if (window.matchMedia("screen and (max-width: 1200px)").matches) { // 탭메뉴로 화면너비 좁아질때-->(1200px) body 움직임x
+		$('body').toggleClass('active');
+	 }
+
+});
+
+/*resize시 0902*/
+/* $( window ).resize( function() {
+  if (window.matchMedia("screen and (max-width: 1200px)").matches && ){
+	
+  } 
+​}); */
+
+</script>

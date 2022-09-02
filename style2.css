@@ -1,0 +1,38 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+html, body { position: relative; width: 100%;}
+ol, ul {list-style:none;}
+a {display:block; text-decoration: none; color:inherit;}
+
+
+header {width:100%; max-width:1200px; margin:0 auto; display:flex; align-items: center; border-bottom:1px solid black;}
+header .logo {width:100px;}
+header nav {width:calc(100% - 200px);}
+header .login {width:100px;}
+header .gnb {display:flex; justify-content: center;}
+header .gnb > li {position:relative;}
+header .gnb > li > a {width:150px; height:50px; line-height:50px; text-align:center;}
+
+header nav .submenu {position:absolute; border:1px solid black; background:#fff; left:-99999px; top:-99999px;}
+header .gnb > li:hover .submenu,
+header nav .submenu.is-show {left:50%; transform:translateX(-50%); top:90%;}
+header nav .submenu li {text-align:center; padding:10px;}
+header nav .submenu li.li-text {font-size:1.5em; font-weight:bold; color:pink;}
+header nav .submenu li a {width:150px; text-align:center;}
+
+
+section {width:100%; max-width:1200px; margin:0 auto; height:500px;}
+.section01 {background:#e9e9e9;}
+.section02 {background:#bbb;}
+
+.quick {position:fixed; right:5vw; bottom:5vw;}
+.quick .btn-quick {width:50px; height:50px;}
+.quick .quick-wrap {position:absolute; bottom:calc(50px + 20px); background:#fff; margin-left:-20px; height:0%; transition:height 0.2s; overflow: hidden;}
+.quick .quick-wrap.active {height:calc(30px * 5 + 20px);}
+.quick .inner {padding:10px;}
+.quick .inner ul {}
+.quick .inner li {padding:0 10px;}
+.quick .inner li:not(:last-child) {border-bottom:1px solid #e9e9e9;}
+.quick .inner li a {height:30px; line-height:30px;}
+
+
+footer {width:100%; border-top:1px solid black; height:120px; background:#e9e9e9; padding:100px; text-align:center;}

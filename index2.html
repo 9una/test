@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./swiper.min.css"/>
+    <title>accessible menu</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">logo</a>
+    <nav>
+      <ul class="gnb">
+        <li><a href="#;">gnb 1</a></li>
+        <li>
+          <a href="#;">gnb 2</a>
+          <ul class="submenu list">
+            <li class="li-text">sub item text</li>
+            <li><a href="#;">lnb 1</a></li>
+            <li><a href="#;">lnb 2</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#;">gnb 3</a>
+          <ul class="submenu list">
+            <li class="li-text">sub item text</li>
+            <li><a href="#;">lnb+ 1</a></li>
+            <li><a href="#;">lnb+ 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a href="#;" class="login">login</a>
+  </header>
+  <div id="container">
+    <section class="section01">section01</section>
+    <section class="section02">section02</section>
+
+    <div class="quick">
+      <button type="button" class="btn-quick">quick</button>
+      <div class="quick-wrap">
+        <div class="inner">
+          <ul>
+            <li><a href="#;">menu1</a></li>
+            <li><a href="#;">menu2</a></li>
+            <li><a href="#;">menu3</a></li>
+            <li><a href="#;">menu4</a></li>
+            <li><a href="#;">menu5</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    footer foot
+  </footer>
+    
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="./tab_nav.js"></script>
+</body>
+</html>
