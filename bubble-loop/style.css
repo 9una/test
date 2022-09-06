@@ -6,19 +6,23 @@ ol, ul {list-style:none;}
 a {color:inherit; text-decoration: none;}
 
 #container {
-    height:100vh;
+    height:80vh;
+    display: flex;
+    position:relative;
 }
 .slide-wrap {
-    width:100%;
-    height:80vh;
+    width:33.3333%;
+    height:100%;
     overflow: hidden;
     background:#5894DE;
     box-shadow:invert 1px 1px 1px rgba(0, 0, 0, 0.5) inset;
 }
 .slide { 
     text-align: center;
-    width:300px;
-    animation: loop 5s linear infinite;
+    width:100%;
+    animation: loop 10s linear infinite;
+    display: flex;
+    flex-direction: column;
 }
 @keyframes loop {
     0% {
@@ -30,9 +34,11 @@ a {color:inherit; text-decoration: none;}
         transform: translate3d(0, -100%, 0);
     }
 }
-.slide02 {padding:50px 0;}
 /*bubble*/
 .bubble {position:relative; display: inline-block; margin:30px; height:fit-content;}
+.slide-wrap-1 .bubble {margin:60px 30px;}
+.slide-wrap-2 .bubble {margin:110px 30px;}
+.slide-wrap-3 .bubble {margin:90px 30px;}
 .bubble::before,
 .bubble::after {
     content:'';
@@ -42,30 +48,43 @@ a {color:inherit; text-decoration: none;}
     position:absolute;
     bottom:-10px;
 }
+.bubble.left {margin-right:auto;}
+.bubble.right {margin-left:auto;}
+.bubble::before {
+    background:#fff;
+    z-index:-1;
+}
+.bubble:not(.center)::after {
+    background:#5894de;
+    z-index:0;
+}
 
 .bubble.left::before {
     left:0;
-    background:#fff;
-    z-index:-1;
     border-radius:0 0 50% 0;
 }
 .bubble.left::after {
     left:-10%;
-    background:#5894de;
-    z-index:0;
     border-radius:0 0 999px 0;
+    height:29px;
+    bottom:-12px;
+}
+
+.bubble.center::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 25px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .bubble.right::before {
     right:0;
-    background:#fff;
-    z-index:-1;
     border-radius:0 0 0 50%;
 }
 .bubble.right::after {
     right:-10%;
-    background:#5894de;
-    z-index:0;
     border-radius:0 0 0 999px;
 }
 
@@ -96,4 +115,19 @@ a {color:inherit; text-decoration: none;}
     color:#fff;
     position:absolute;
     font-size:40px;
+}
+
+.main_txt {position:absolute; width:500px; height:300px; background:rgba(255, 255, 255, 0.3); left:50%; top:50%; transform:translate(-50%, -50%); text-align: center; display: flex; align-items: center; justify-content: center; flex-direction: column; padding:0 50px;}
+.main_txt p {font-size:22px;}
+.main_txt > div {width:100%; border:3px solid #fff; padding:20px 10px; margin:10px 0; text-transform: uppercase;}
+
+
+@media screen and (max-width:768px) {
+    .slide-wrap-3 {display: none;}
+    .slide-wrap {width:50%;}
+}
+
+@media screen and (max-width:375px) {
+    .slide-wrap-2 {display: none;}
+    .slide-wrap {width:100%;}
 }
