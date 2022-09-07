@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">    
+</head>
+<body>
+    <header>
+        <div class="menu pc">
+            <a href="#" class="logo">logo</a>
+            <div class="gnb">
+                <ul>
+                    <li><a href="#;">menu</a></li>
+                    <li><a href="#;">menu</a></li>
+                    <li><a href="#;">menu</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="menu mobile">
+            <a href="#" class="logo">m-logo</a>
+            <button type="button" class="btn-ham"><span></span></button>
+            <div class="m_gnb">
+                <ul>
+                    <li><a href="#;">m-menu</a></li>
+                    <li><a href="#;">m-menu</a></li>
+                    <li><a href="#;">m-menu</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <main>
+            <h1 style="margin-bottom:30px;">main</h1>
+            <p>
+                display: none / block 사용하지 말구<br>
+                visibility: hidden, opacity:0, transition:0.3s<br>
+                visibility: visible, opacity:1로 사용
+            </p>
+        </main>
+        <section>
+            <h2>section1</h2>
+        </section>
+        <section>
+            <h2>section2</h2>
+        </section>
+    </div>
+
+    <footer>
+        footer
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+
+        $('.btn-ham').click(function(){
+            $('header').toggleClass('has_dim');
+            $('.m_gnb').toggleClass('active');
+            bodyCheck();
+        })
+
+        function bodyCheck(){
+            $('header').hasClass('has_dim') == true
+            ?$('body').addClass('nonscroll')
+            :$('body').removeClass('nonscroll')
+        }
+
+
+        const body = document.querySelector('body');
+        body.addEventListener('click', clickBodyEvent);
+
+        function clickBodyEvent(event){
+            const target = event.target;
+            if(event.target.className == "has_dim"){
+                $('.m_gnb').removeClass('active');
+                event.target.classList.remove('has_dim');
+                body.classList.remove('nonscroll');
+            }
+        }
+
+        bodyCheck();
+    </script>
+</body>
+</html>
