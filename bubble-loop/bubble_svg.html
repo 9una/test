@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bubble pointer svg</title>
+    <style>
+      body {
+        background: coral;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        margin: 30px;
+        width: 200px;
+        padding: 10px 20px 15px;
+        text-align: center;
+        background: white;
+        position: relative;
+        border-radius: 30px;
+      }
+      /*svg에서 data:img/png;base64 쪽에서 /png 지워줘야 보임*/
+      div i {
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 12px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30px' height='12px'%3E%3Cimage x='0px' y='0px' width='30px' height='12px' xlink:href='data:img;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAMCAQAAADfJ8W5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfmCQ0RHSVaP5mPAAAAtElEQVQoz5XSLQ9BYRjG8evR+AKHZjubYLNJJym6JMmKTfQVJHwCVbGpkm9gE+wEyWYqNtWwnb+E8+blua90X/d+7TY4cuWpoboy+j2BfC211lZ7ncQzRcbc+TYruuR5Cym8UMX/AA80UTzxIsskhR5xkzSJhWGYwJ00moaF6BFEcMkGixaXEK7ZYVFh88J9WyxyDLgCcMaxxUKUmQOwwNhjITxm3BglL4Y/flJSQW3tNI2WD+06hczep/BHAAAAAElFTkSuQmCC' /%3E%3C/svg%3E");
+      }
+      div.right i {
+        transform: rotateY(180deg) translateX(50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <i></i>
+    </div>
+    <div class="right">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <i></i>
+    </div>
+  </body>
+</html>
