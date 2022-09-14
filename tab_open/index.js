@@ -1,4 +1,5 @@
-//자주하는 질문 어코디언 메뉴
+$(function() {
+	//어코디언 메뉴
 	var Accordion = function(el, multiple) {
 		this.el = el || {};
 		this.multiple = multiple || false;
@@ -23,3 +24,4 @@
 	}	
 
 	var accordion = new Accordion($('.review_wrap'), false);
+});
