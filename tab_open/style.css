@@ -1,0 +1,13 @@
+* {margin:0; padding:0; box-sizing:border-box;}
+html, body {width:100%;}
+ol, ul {list-style:none;}
+a {text-decoration: none; color:inherit; display:block;}
+
+.review_wrap {
+    width:100%;
+    max-width:768px;
+    margin:0 auto;
+}
+.review_wrap li .txt_title {background:yellow;border-bottom:1px solid #000;}
+.review_wrap li .txt_title a {padding:20px; }
+.review_wrap li .txt_review {padding:20px; background:yellowgreen; border-bottom:1px solid #000;}
