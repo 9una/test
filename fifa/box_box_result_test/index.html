@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box test</title>
+    <style>
+        * {margin:0; padding:0; box-sizing:border-box;}
+        html, body {width:100%;}
+        ol, ul, li {list-style:none;}
+        button {border:none; background:inherit; cursor:pointer;}
+        #container {display:block; width:fit-content; margin:50px auto;}
+
+        #container > div {display:inline-block; text-align: center; vertical-align: middle;}
+        .step {
+            width:120px; height:300px; border:2px solid coral;
+            display: flex; flex-direction: column;
+        }
+        .step span {display:block; height:50px; line-height:50px; background:coral; color:#fff;}
+        .step:not(.step_1) li.disabled {background:#e9e9e9;}
+        .step.step_1 li, .step li.active {background:#fff;}
+        .step button {width:100%; height:100%; position:relative;}
+        .step li button {border-bottom:1px solid coral;}
+        /* step 01 */
+        .step_1 li {height:35.3px;}
+        /* step 02 */
+        .step_2 ul {position:relative; height:calc(100% - 50px);}
+        .step_2 ul::after {
+            content:'';
+            width:100%;
+            height:100%;
+            background:rgba(0, 0, 0, 0.3);
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        .step_2.active ul::after {display: none;}
+        .step_2 li {height:0; overflow:hidden;}
+        .step_2.cate01 li.cate1 {height:82.2px;}
+        .step_2.cate02 li.cate2 {height:123.4px;}
+        .step_2.cate03 li.cate3 {height:61.7px;}
+        .step_2.cate04 li.cate4 {height:123.4px;}
+        .step_2.cate05 li.cate5 {height:123.4px;}
+        .step_2.cate06 li.cate6 {height:61.7px;}
+        .step_2.cate07 li.cate7 {height:82.2px;}
+        
+        .step li.active button::after {
+            content:'v';
+            position:absolute;
+            right:10px;
+            width:15px;
+            height:15px;
+            background:coral;
+            color:#fff;
+            line-height:1;
+            border-radius:50%;
+        }
+
+        .btns button {background:coral; color:#fff; padding:10px 25px; font-weight:bold; margin-top:50px;}
+        .btn_card_put.disabled {background:#e9e9e9; color:#999; cursor:inherit;}
+        .btn_card_reset {display: none;}
+
+        .result_box {height:calc(100% - 50px); display:flex; align-items: center; justify-content: center;;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="step step_1 active">
+            <span>step 01</span>
+            <ul>
+                <li>
+                    <button type="button" data-category="건강" onclick="return false;" class="btn_step1_1">건강</button>
+                </li>
+                <li>
+                    <button type="button" data-category="뷰티" onclick="return false;" class="btn_step1_2">뷰티</button>
+                </li>
+                <li>
+                    <button type="button" data-category="주식" onclick="return false;" class="btn_step1_3">주식</button>
+                </li>
+                <li>
+                    <button type="button" data-category="교육" onclick="return false;" class="btn_step1_4">교육</button>
+                </li>
+                <li>
+                    <button type="button" data-category="렌트/리스" onclick="return false;" class="btn_step1_5">렌트/리스</button>
+                
+                <li>
+                    <button type="button" data-category="병의원" onclick="return false;" class="btn_step1_6">병의원</button>
+                </li>
+                <li>
+                    <button type="button" data-category="번역" onclick="return false;" class="btn_step1_7">번역</button>
+                </li>
+            </ul>
+        </div>
+        <div class="step step_2">
+            <span>step 02</span>
+            <ul>
+                <!-- 1 ~ 3 -->
+                <li class="cate1">
+                    <button type="button" data-sub="성인" onclick="return false;" class="btn_step2_1">성인</button>
+                </li>
+                <li class="cate1">
+                    <button type="button" data-sub="관절" onclick="return false;" class="btn_step2_2">관절</button>
+                </li>
+                <li class="cate1">
+                    <button type="button" data-sub="어린이" onclick="return false;" class="btn_step2_3">어린이</button>
+                </li>
+
+
+                <!-- 4, 5 -->
+                <li class="cate2">
+                    <button type="button" data-sub="다이어트" onclick="return false;" class="btn_step2_1">다이어트</button>
+                </li>
+                <li class="cate2">
+                    <button type="button" data-sub="화장품" onclick="return false;" class="btn_step2_2">화장품</button>
+                </li>
+
+
+                <!-- 6 ~ 9 -->
+                <li class="cate3">
+                    <button type="button" data-sub="주식1" onclick="return false;" class="btn_step2_1">주식1</button>
+                </li>
+                <li class="cate3">
+                    <button type="button" data-sub="주식2" onclick="return false;" class="btn_step2_2">주식2</button>
+                </li>
+                <li class="cate3">
+                    <button type="button" data-sub="주식3" onclick="return false;" class="btn_step2_3">주식3</button>
+                </li>
+                <li class="cate3">
+                    <button type="button" data-sub="주식4" onclick="return false;" class="btn_step2_4">주식4</button>
+                </li>
+
+
+                <!-- 10, 11 -->
+                <li class="cate4">
+                    <button type="button" data-sub="교육1" onclick="return false;" class="btn_step2_1">교육1</button>
+                </li>
+                <li class="cate4">
+                    <button type="button" data-sub="교육2" onclick="return false;" class="btn_step2_2">교육2</button>
+                </li>
+
+
+                <!-- 12, 13 -->
+                <li class="cate5">
+                    <button type="button" data-sub="렌트/리스1" onclick="return false;" class="btn_step2_1">렌트/리스1</button>
+                </li>
+                <li class="cate5">
+                    <button type="button" data-sub="렌트/리스2" onclick="return false;" class="btn_step2_2">렌트/리스2</button>
+                </li>
+
+
+                <!-- 14 ~ 17 -->
+                <li class="cate6">
+                    <button type="button" data-sub="병의원1" onclick="return false;" class="btn_step2_1">병의원1</button>
+                </li>
+                <li class="cate6">
+                    <button type="button" data-sub="병의원2" onclick="return false;" class="btn_step2_2">병의원2</button>
+                </li>
+                <li class="cate6">
+                    <button type="button" data-sub="병의원3" onclick="return false;" class="btn_step2_3">병의원3</button>
+                </li>
+                <li class="cate6">
+                    <button type="button" data-sub="병의원4" onclick="return false;" class="btn_step2_4">병의원4</button>
+                </li>
+                
+
+                <!-- 18 ~ 20 -->
+                <li class="cate7">
+                    <button type="button" data-sub="번역1" onclick="return false;" class="btn_step2_1">번역1</button>
+                </li>
+                <li class="cate7">
+                    <button type="button" data-sub="번역2" onclick="return false;" class="btn_step2_2">번역2</button>
+                </li>
+                <li class="cate7">
+                    <button type="button" data-sub="번역3" onclick="return false;" class="btn_step2_3">번역3</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btns">
+            <button type="button" onclick="" class="btn btn_card_put disabled">조합하기</button>
+            <button type="button" onclick="" class="btn btn_card_reset">다시하기</button>
+        </div>
+
+        <div class="step result active">
+            <span>result</span>
+            <div class="result_box">
+                <!-- result -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
