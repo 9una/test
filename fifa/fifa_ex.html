@@ -1,354 +1,242 @@
-<html lang="ko"><head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <title>EA SPORTS™ FIFA ONLINE 4</title>
-    <meta name="viewport" content="width=1280">
-
-    <meta name="robots" content="index,follow">
-    <meta name="description" content="EA SPORTS ™ FIFA ONLINE 4 - NEXON Korea">
-    <meta name="author" content="NEXON Korea">
-    <meta name="keywords" content="NEXON, 넥슨, NEXON Korea, 넥슨코리아, FIFA, 피파, 피파온라인, 피파 온라인 4, EA, EA Sports, 스포츠">
-    
-    <script type="text/javascript" async="" src="https://ssl.nexon.com/s1/livewebjs/GnxVisitorTracking.min.js"></script>
-    <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_head.js"></script>
-    <script src="https://ssl.nexon.com/s1/global/ngb_headstart.js?v=1663750554072" type="text/javascript"></script>
-    <script src="https://platform.nexon.com/ajax/npf_auth_c.js" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://logins.nexon.com/login/page/ngb_login.aspx" type="text/javascript"></script>
-    <script src="https://ssl.nexon.com/s1/global/ngb_RSAHash.js" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://logins.nexon.com/scripts/captchalogin" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://ssl.nexon.com/s1/global/ngb_pcbanglogin.js?v=20181015" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://ssl.nexon.com/s1/global/ngb_util.js?v=20190903" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://ssl.nexon.com/s1/member/nxmember.js?v=20200111" type="text/javascript"></script>
-    <script charset="euc-kr" src="https://ssl.nexon.com/s1/External/makePCIDCookie.js" type="text/javascript"></script>
-    <script src="https://ssl.nexon.com/s1/da/a2s.js" type="text/javascript"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/library/jquery.min.js"></script>
-
-    <script src="https://ssl.nexon.com/s1/fo4/common/ga.js"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/common/gtm.js"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/library/TweenMax.min.js"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/obt/fObject.min.js"></script>
-    <script type="text/javascript" src="https://ssl.nexon.com/s1/p2/ps.min.js" charset="utf-8" data-name="PS" data-ngm="true" data-nxlogin="true"></script>
-    <script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/common/platform.js"></script>
-    <script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/ngm/js/NGMModuleInfo.js"></script>
-    <script type="text/javascript" charset="euc-kr" src="https://platform.nexon.com/ngm/js/npf_ngm.js"></script>
-    <script type="text/javascript" charset="utf-8" src="https://ssl.nexon.com/s1/p2/util.min.js" data-name="PSUtil"></script>
-    <!--[if lt IE 10]>
-    <script>location.href = "http://fifaonline4.nexon.com/common/ie9"</script>
-    <![endif]-->
-    <!-- 이벤트 CSS, JS, SNS -->
-    <link rel="stylesheet" href="https://ssl.nexon.com/s3/fo4/obt/init.css" media="all">
-    
-    <link rel="stylesheet" href="/Content/220908/diy/diy.css?t=202209211755" media="all">
-    <script src="/Content/220908/diy/diy.js?t=202209211755"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/plugin/sly.min.js"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/plugin/jquery.easing.min.js"></script>
-    <script src="https://ssl.nexon.com/s1/fo4/plugin/swiper.min.js"></script>
-
-    <!-- 이벤트 CSS, JS, SNS -->
-    
-    
-
-    <!-- Global site tag (gtag.js) - Google Ads: 827351135 -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-827351135"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'AW-827351135');
-
-    </script>
-    <script type="text/javascript">
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-827351135/3UQkCNTp9v8CEN_AwYoD',
-                'event_callback': callback
-            });
-            return false;
-        }
-    </script>
-
-    <script type="text/javascript">
-        function GnxGameStartOnClick(argument) {
-                
-                top.PS.nxlogin.showLoginLayer();
-                
-        }
-    </script>
-
-    <meta http-equiv="origin-trial" content="A7bG5hJ4XpMV5a3V1wwAR0PalkFSxLOZeL9D/YBYdupYUIgUgGhfVJ1zBFOqGybb7gRhswfJ+AmO7S2rNK2IOwkAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjY5NzY2Mzk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
-    <script type="text/javascript" charset="utf-8" src="https://js.nexon.com/s1/p2/ngm-layer.min.js" data-name="NgmRunLayer"></script>
-    <script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/827351135/?random=1663750554213&amp;cv=9&amp;fst=1663750554213&amp;num=1&amp;bg=ffffff&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1040&amp;u_aw=1920&amp;u_cd=24&amp;u_his=3&amp;u_tz=540&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;gtm=2oa9j0&amp;sendb=1&amp;ig=1&amp;data=event%3Dgtag.config&amp;frm=0&amp;url=https%3A%2F%2Fevents.fifaonline4.nexon.com%2F220908%2Fplayerpack%3Futm_source%3Dpc%26utm_medium%3DmainMiddle%26utm_campaign%3D220908_playerpack&amp;tiba=EA%20SPORTS%E2%84%A2%20FIFA%20ONLINE%204&amp;auid=217945097.1663750512&amp;hn=www.googleadservices.com&amp;async=1&amp;rfmt=3&amp;fmt=4"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style type="text/css">
-      body.swal2-shown:not(.swal2-no-backdrop) {
-        overflow-y: hidden; }
-
-      body.swal2-toast-shown {
-        overflow-y: auto; }
-        body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast {
-          -webkit-box-orient: vertical;
+        body.swal2-shown:not(.swal2-no-backdrop) {
+          overflow-y: hidden; }
+  
+        body.swal2-toast-shown {
+          overflow-y: auto; }
+          body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column; }
+            body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-icon {
+              margin: 0 0 15px; }
+            body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-buttonswrapper {
+              -webkit-box-flex: 1;
+                  -ms-flex: 1;
+                      flex: 1;
+              -ms-flex-item-align: stretch;
+                  align-self: stretch;
+              -webkit-box-pack: end;
+                  -ms-flex-pack: end;
+                      justify-content: flex-end; }
+            body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-loading {
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center; }
+            body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-input {
+              height: 32px;
+              font-size: 14px;
+              margin: 5px auto; }
+          body.swal2-toast-shown > .swal2-container {
+            position: fixed;
+            background-color: transparent; }
+            body.swal2-toast-shown > .swal2-container.swal2-shown {
+              background-color: transparent; }
+            body.swal2-toast-shown > .swal2-container.swal2-top {
+              top: 0;
+              left: 50%;
+              bottom: auto;
+              right: auto;
+              -webkit-transform: translateX(-50%);
+                      transform: translateX(-50%); }
+            body.swal2-toast-shown > .swal2-container.swal2-top-right {
+              top: 0;
+              left: auto;
+              bottom: auto;
+              right: 0; }
+            body.swal2-toast-shown > .swal2-container.swal2-top-left {
+              top: 0;
+              left: 0;
+              bottom: auto;
+              right: auto; }
+            body.swal2-toast-shown > .swal2-container.swal2-center-left {
+              top: 50%;
+              left: 0;
+              bottom: auto;
+              right: auto;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%); }
+            body.swal2-toast-shown > .swal2-container.swal2-center {
+              top: 50%;
+              left: 50%;
+              bottom: auto;
+              right: auto;
+              -webkit-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%); }
+            body.swal2-toast-shown > .swal2-container.swal2-center-right {
+              top: 50%;
+              left: auto;
+              bottom: auto;
+              right: 0;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%); }
+            body.swal2-toast-shown > .swal2-container.swal2-bottom-left {
+              top: auto;
+              left: 0;
+              bottom: 0;
+              right: auto; }
+            body.swal2-toast-shown > .swal2-container.swal2-bottom {
+              top: auto;
+              left: 50%;
+              bottom: 0;
+              right: auto;
+              -webkit-transform: translateX(-50%);
+                      transform: translateX(-50%); }
+            body.swal2-toast-shown > .swal2-container.swal2-bottom-right {
+              top: auto;
+              left: auto;
+              bottom: 0;
+              right: 0; }
+  
+        body.swal2-iosfix {
+          position: fixed;
+          left: 0;
+          right: 0; }
+  
+        body.swal2-no-backdrop > .swal2-shown {
+          top: auto;
+          bottom: auto;
+          left: auto;
+          right: auto;
+          background-color: transparent; }
+          body.swal2-no-backdrop > .swal2-shown > .swal2-modal {
+            -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-top {
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-top-left {
+            top: 0;
+            left: 0; }
+          body.swal2-no-backdrop > .swal2-shown.swal2-top-right {
+            top: 0;
+            right: 0; }
+          body.swal2-no-backdrop > .swal2-shown.swal2-center {
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-center-left {
+            top: 50%;
+            left: 0;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-center-right {
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-bottom {
+            bottom: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%); }
+          body.swal2-no-backdrop > .swal2-shown.swal2-bottom-left {
+            bottom: 0;
+            left: 0; }
+          body.swal2-no-backdrop > .swal2-shown.swal2-bottom-right {
+            bottom: 0;
+            right: 0; }
+  
+        .swal2-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
           -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column; }
-          body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-icon {
-            margin: 0 0 15px; }
-          body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-buttonswrapper {
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          position: fixed;
+          padding: 10px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: transparent;
+          z-index: 1060; }
+          .swal2-container.swal2-top {
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start; }
+          .swal2-container.swal2-top-left {
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start; }
+          .swal2-container.swal2-top-right {
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end; }
+          .swal2-container.swal2-center {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+          .swal2-container.swal2-center-left {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start; }
+          .swal2-container.swal2-center-right {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end; }
+          .swal2-container.swal2-bottom {
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end; }
+          .swal2-container.swal2-bottom-left {
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start; }
+          .swal2-container.swal2-bottom-right {
+            -webkit-box-align: end;
+                -ms-flex-align: end;
+                    align-items: flex-end;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end; }
+          .swal2-container.swal2-grow-fullscreen > .swal2-modal {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
             -webkit-box-flex: 1;
                 -ms-flex: 1;
                     flex: 1;
             -ms-flex-item-align: stretch;
                 align-self: stretch;
-            -webkit-box-pack: end;
-                -ms-flex-pack: end;
-                    justify-content: flex-end; }
-          body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-loading {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; }
-          body.swal2-toast-shown.swal2-has-input > .swal2-container > .swal2-toast .swal2-input {
-            height: 32px;
-            font-size: 14px;
-            margin: 5px auto; }
-        body.swal2-toast-shown > .swal2-container {
-          position: fixed;
-          background-color: transparent; }
-          body.swal2-toast-shown > .swal2-container.swal2-shown {
-            background-color: transparent; }
-          body.swal2-toast-shown > .swal2-container.swal2-top {
-            top: 0;
-            left: 50%;
-            bottom: auto;
-            right: auto;
-            -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%); }
-          body.swal2-toast-shown > .swal2-container.swal2-top-right {
-            top: 0;
-            left: auto;
-            bottom: auto;
-            right: 0; }
-          body.swal2-toast-shown > .swal2-container.swal2-top-left {
-            top: 0;
-            left: 0;
-            bottom: auto;
-            right: auto; }
-          body.swal2-toast-shown > .swal2-container.swal2-center-left {
-            top: 50%;
-            left: 0;
-            bottom: auto;
-            right: auto;
-            -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%); }
-          body.swal2-toast-shown > .swal2-container.swal2-center {
-            top: 50%;
-            left: 50%;
-            bottom: auto;
-            right: auto;
-            -webkit-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%); }
-          body.swal2-toast-shown > .swal2-container.swal2-center-right {
-            top: 50%;
-            left: auto;
-            bottom: auto;
-            right: 0;
-            -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%); }
-          body.swal2-toast-shown > .swal2-container.swal2-bottom-left {
-            top: auto;
-            left: 0;
-            bottom: 0;
-            right: auto; }
-          body.swal2-toast-shown > .swal2-container.swal2-bottom {
-            top: auto;
-            left: 50%;
-            bottom: 0;
-            right: auto;
-            -webkit-transform: translateX(-50%);
-                    transform: translateX(-50%); }
-          body.swal2-toast-shown > .swal2-container.swal2-bottom-right {
-            top: auto;
-            left: auto;
-            bottom: 0;
-            right: 0; }
-
-      body.swal2-iosfix {
-        position: fixed;
-        left: 0;
-        right: 0; }
-
-      body.swal2-no-backdrop > .swal2-shown {
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        background-color: transparent; }
-        body.swal2-no-backdrop > .swal2-shown > .swal2-modal {
-          -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-top {
-          top: 0;
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-top-left {
-          top: 0;
-          left: 0; }
-        body.swal2-no-backdrop > .swal2-shown.swal2-top-right {
-          top: 0;
-          right: 0; }
-        body.swal2-no-backdrop > .swal2-shown.swal2-center {
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-                  transform: translate(-50%, -50%); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-center-left {
-          top: 50%;
-          left: 0;
-          -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-center-right {
-          top: 50%;
-          right: 0;
-          -webkit-transform: translateY(-50%);
-                  transform: translateY(-50%); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-bottom {
-          bottom: 0;
-          left: 50%;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%); }
-        body.swal2-no-backdrop > .swal2-shown.swal2-bottom-left {
-          bottom: 0;
-          left: 0; }
-        body.swal2-no-backdrop > .swal2-shown.swal2-bottom-right {
-          bottom: 0;
-          right: 0; }
-
-      .swal2-container {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        position: fixed;
-        padding: 10px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: transparent;
-        z-index: 1060; }
-        .swal2-container.swal2-top {
-          -webkit-box-align: start;
-              -ms-flex-align: start;
-                  align-items: flex-start; }
-        .swal2-container.swal2-top-left {
-          -webkit-box-align: start;
-              -ms-flex-align: start;
-                  align-items: flex-start;
-          -webkit-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start; }
-        .swal2-container.swal2-top-right {
-          -webkit-box-align: start;
-              -ms-flex-align: start;
-                  align-items: flex-start;
-          -webkit-box-pack: end;
-              -ms-flex-pack: end;
-                  justify-content: flex-end; }
-        .swal2-container.swal2-center {
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center; }
-        .swal2-container.swal2-center-left {
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start; }
-        .swal2-container.swal2-center-right {
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: end;
-              -ms-flex-pack: end;
-                  justify-content: flex-end; }
-        .swal2-container.swal2-bottom {
-          -webkit-box-align: end;
-              -ms-flex-align: end;
-                  align-items: flex-end; }
-        .swal2-container.swal2-bottom-left {
-          -webkit-box-align: end;
-              -ms-flex-align: end;
-                  align-items: flex-end;
-          -webkit-box-pack: start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start; }
-        .swal2-container.swal2-bottom-right {
-          -webkit-box-align: end;
-              -ms-flex-align: end;
-                  align-items: flex-end;
-          -webkit-box-pack: end;
-              -ms-flex-pack: end;
-                  justify-content: flex-end; }
-        .swal2-container.swal2-grow-fullscreen > .swal2-modal {
-          display: -webkit-box !important;
-          display: -ms-flexbox !important;
-          display: flex !important;
-          -webkit-box-flex: 1;
-              -ms-flex: 1;
-                  flex: 1;
-          -ms-flex-item-align: stretch;
-              align-self: stretch;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-        .swal2-container.swal2-grow-row > .swal2-modal {
-          display: -webkit-box !important;
-          display: -ms-flexbox !important;
-          display: flex !important;
-          -webkit-box-flex: 1;
-              -ms-flex: 1;
-                  flex: 1;
-          -ms-flex-line-pack: center;
-              align-content: center;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-        .swal2-container.swal2-grow-column {
-          -webkit-box-flex: 1;
-              -ms-flex: 1;
-                  flex: 1;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column; }
-          .swal2-container.swal2-grow-column.swal2-top, .swal2-container.swal2-grow-column.swal2-center, .swal2-container.swal2-grow-column.swal2-bottom {
-            -webkit-box-align: center;
-                -ms-flex-align: center;
-                    align-items: center; }
-          .swal2-container.swal2-grow-column.swal2-top-left, .swal2-container.swal2-grow-column.swal2-center-left, .swal2-container.swal2-grow-column.swal2-bottom-left {
-            -webkit-box-align: start;
-                -ms-flex-align: start;
-                    align-items: flex-start; }
-          .swal2-container.swal2-grow-column.swal2-top-right, .swal2-container.swal2-grow-column.swal2-center-right, .swal2-container.swal2-grow-column.swal2-bottom-right {
-            -webkit-box-align: end;
-                -ms-flex-align: end;
-                    align-items: flex-end; }
-          .swal2-container.swal2-grow-column > .swal2-modal {
+          .swal2-container.swal2-grow-row > .swal2-modal {
             display: -webkit-box !important;
             display: -ms-flexbox !important;
             display: flex !important;
@@ -360,1419 +248,1140 @@
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; }
-        .swal2-container:not(.swal2-top):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-left):not(.swal2-bottom-right) > .swal2-modal {
-          margin: auto; }
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-          .swal2-container .swal2-modal {
-            margin: 0 !important; } }
-        .swal2-container.swal2-fade {
-          -webkit-transition: background-color .1s;
-          transition: background-color .1s; }
-        .swal2-container.swal2-shown {
-          background-color: rgba(0, 0, 0, 0.4); }
-
-      .swal2-popup {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        background-color: #fff;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        border-radius: 5px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        text-align: center;
-        overflow-x: hidden;
-        overflow-y: auto;
-        display: none;
-        position: relative;
-        max-width: 100%; }
-        .swal2-popup.swal2-toast {
-          width: 300px;
-          padding: 0 15px;
-          -webkit-box-orient: horizontal;
+          .swal2-container.swal2-grow-column {
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column; }
+            .swal2-container.swal2-grow-column.swal2-top, .swal2-container.swal2-grow-column.swal2-center, .swal2-container.swal2-grow-column.swal2-bottom {
+              -webkit-box-align: center;
+                  -ms-flex-align: center;
+                      align-items: center; }
+            .swal2-container.swal2-grow-column.swal2-top-left, .swal2-container.swal2-grow-column.swal2-center-left, .swal2-container.swal2-grow-column.swal2-bottom-left {
+              -webkit-box-align: start;
+                  -ms-flex-align: start;
+                      align-items: flex-start; }
+            .swal2-container.swal2-grow-column.swal2-top-right, .swal2-container.swal2-grow-column.swal2-center-right, .swal2-container.swal2-grow-column.swal2-bottom-right {
+              -webkit-box-align: end;
+                  -ms-flex-align: end;
+                      align-items: flex-end; }
+            .swal2-container.swal2-grow-column > .swal2-modal {
+              display: -webkit-box !important;
+              display: -ms-flexbox !important;
+              display: flex !important;
+              -webkit-box-flex: 1;
+                  -ms-flex: 1;
+                      flex: 1;
+              -ms-flex-line-pack: center;
+                  align-content: center;
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center; }
+          .swal2-container:not(.swal2-top):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-left):not(.swal2-bottom-right) > .swal2-modal {
+            margin: auto; }
+          @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            .swal2-container .swal2-modal {
+              margin: 0 !important; } }
+          .swal2-container.swal2-fade {
+            -webkit-transition: background-color .1s;
+            transition: background-color .1s; }
+          .swal2-container.swal2-shown {
+            background-color: rgba(0, 0, 0, 0.4); }
+  
+        .swal2-popup {
+          -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          overflow-y: hidden;
-          -webkit-box-shadow: 0 0 10px #d9d9d9;
-                  box-shadow: 0 0 10px #d9d9d9; }
-          .swal2-popup.swal2-toast .swal2-title {
-            max-width: 300px;
-            font-size: 16px;
-            text-align: left; }
-          .swal2-popup.swal2-toast .swal2-content {
-            font-size: 14px;
-            text-align: left; }
-          .swal2-popup.swal2-toast .swal2-icon {
-            width: 32px;
-            height: 32px;
-            margin: 0 15px 0 0; }
-            .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
-              width: 32px;
-              height: 32px; }
-            .swal2-popup.swal2-toast .swal2-icon.swal2-info, .swal2-popup.swal2-toast .swal2-icon.swal2-warning, .swal2-popup.swal2-toast .swal2-icon.swal2-question {
-              font-size: 26px;
-              line-height: 32px; }
-            .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
-              top: 14px;
-              width: 22px; }
-              .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
-                left: 5px; }
-              .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
-                right: 5px; }
-          .swal2-popup.swal2-toast .swal2-buttonswrapper {
-            margin: 0 0 0 5px; }
-          .swal2-popup.swal2-toast .swal2-styled {
-            margin: 0 0 0 5px;
-            padding: 5px 10px; }
-            .swal2-popup.swal2-toast .swal2-styled:focus {
-              -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4);
-                      box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4); }
-          .swal2-popup.swal2-toast .swal2-validationerror {
-            width: 100%;
-            margin: 5px -20px; }
-          .swal2-popup.swal2-toast .swal2-success {
-            border-color: #a5dc86; }
-            .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'] {
-              border-radius: 50%;
-              position: absolute;
-              width: 32px;
-              height: 64px;
-              -webkit-transform: rotate(45deg);
-                      transform: rotate(45deg); }
-              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='left'] {
-                border-radius: 64px 0 0 64px;
-                top: -4px;
-                left: -15px;
-                -webkit-transform: rotate(-45deg);
-                        transform: rotate(-45deg);
-                -webkit-transform-origin: 32px 32px;
-                        transform-origin: 32px 32px; }
-              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='right'] {
-                border-radius: 0 64px 64px 0;
-                top: -5px;
-                left: 14px;
-                -webkit-transform-origin: 0 32px;
-                        transform-origin: 0 32px; }
-            .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
-              width: 32px;
-              height: 32px; }
-            .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
-              width: 7px;
-              height: 90px;
-              left: 28px;
-              top: 8px; }
-            .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'] {
-              height: 5px; }
-              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='tip'] {
-                width: 12px;
-                left: 3px;
-                top: 18px; }
-              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='long'] {
-                width: 22px;
-                right: 3px;
-                top: 15px; }
-          .swal2-popup.swal2-toast .swal2-animate-success-line-tip {
-            -webkit-animation: animate-toast-success-tip .75s;
-                    animation: animate-toast-success-tip .75s; }
-          .swal2-popup.swal2-toast .swal2-animate-success-line-long {
-            -webkit-animation: animate-toast-success-long .75s;
-                    animation: animate-toast-success-long .75s; }
-        .swal2-popup:focus {
-          outline: none; }
-        .swal2-popup.swal2-loading {
-          overflow-y: hidden; }
-        .swal2-popup .swal2-title {
-          color: #595959;
-          font-size: 30px;
-          text-align: center;
-          font-weight: 600;
-          text-transform: none;
-          position: relative;
-          margin: 0 0 .4em;
-          padding: 0;
-          display: block;
-          word-wrap: break-word; }
-        .swal2-popup .swal2-buttonswrapper {
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          margin-top: 15px; }
-          .swal2-popup .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabled] {
-            opacity: .4;
-            cursor: no-drop; }
-          .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confirm {
-            -webkit-box-sizing: border-box;
-                    box-sizing: border-box;
-            border: 4px solid transparent;
-            border-color: transparent;
-            width: 40px;
-            height: 40px;
-            padding: 0;
-            margin: 7.5px;
-            vertical-align: top;
-            background-color: transparent !important;
-            color: transparent;
-            cursor: default;
-            border-radius: 100%;
-            -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
-                    animation: rotate-loading 1.5s linear 0s infinite normal;
-            -webkit-user-select: none;
-              -moz-user-select: none;
-                -ms-user-select: none;
-                    user-select: none; }
-          .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel {
-            margin-left: 30px;
-            margin-right: 30px; }
-          .swal2-popup .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-confirm::after {
-            display: inline-block;
-            content: '';
-            margin-left: 5px;
-            vertical-align: -1px;
-            height: 15px;
-            width: 15px;
-            border: 3px solid #999999;
-            -webkit-box-shadow: 1px 1px 1px #fff;
-                    box-shadow: 1px 1px 1px #fff;
-            border-right-color: transparent;
-            border-radius: 50%;
-            -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
-                    animation: rotate-loading 1.5s linear 0s infinite normal; }
-        .swal2-popup .swal2-styled {
-          border: 0;
-          border-radius: 3px;
-          -webkit-box-shadow: none;
-                  box-shadow: none;
-          color: #fff;
-          cursor: pointer;
-          font-size: 17px;
-          font-weight: 500;
-          margin: 15px 5px 0;
-          padding: 10px 32px; }
-          .swal2-popup .swal2-styled:focus {
-            outline: none;
-            -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4);
-                    box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
-        .swal2-popup .swal2-image {
-          margin: 20px auto;
-          max-width: 100%; }
-        .swal2-popup .swal2-close {
-          background: transparent;
-          border: 0;
-          margin: 0;
-          padding: 0;
-          width: 38px;
-          height: 40px;
-          font-size: 36px;
-          line-height: 40px;
-          font-family: serif;
-          position: absolute;
-          top: 5px;
-          right: 8px;
-          cursor: pointer;
-          color: #cccccc;
-          -webkit-transition: color .1s ease;
-          transition: color .1s ease; }
-          .swal2-popup .swal2-close:hover {
-            color: #d55; }
-        .swal2-popup > .swal2-input,
-        .swal2-popup > .swal2-file,
-        .swal2-popup > .swal2-textarea,
-        .swal2-popup > .swal2-select,
-        .swal2-popup > .swal2-radio,
-        .swal2-popup > .swal2-checkbox {
-          display: none; }
-        .swal2-popup .swal2-content {
-          font-size: 18px;
-          text-align: center;
-          font-weight: 300;
-          position: relative;
-          float: none;
-          margin: 0;
-          padding: 0;
-          line-height: normal;
-          color: #545454;
-          word-wrap: break-word; }
-        .swal2-popup .swal2-input,
-        .swal2-popup .swal2-file,
-        .swal2-popup .swal2-textarea,
-        .swal2-popup .swal2-select,
-        .swal2-popup .swal2-radio,
-        .swal2-popup .swal2-checkbox {
-          margin: 20px auto; }
-        .swal2-popup .swal2-input,
-        .swal2-popup .swal2-file,
-        .swal2-popup .swal2-textarea {
-          width: 100%;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          background-color: #fff;
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          border-radius: 5px;
           -webkit-box-sizing: border-box;
                   box-sizing: border-box;
-          font-size: 18px;
-          border-radius: 3px;
-          border: 1px solid #d9d9d9;
-          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
-                  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
-          -webkit-transition: border-color .3s, -webkit-box-shadow .3s;
-          transition: border-color .3s, -webkit-box-shadow .3s;
-          transition: border-color .3s, box-shadow .3s;
-          transition: border-color .3s, box-shadow .3s, -webkit-box-shadow .3s; }
-          .swal2-popup .swal2-input.swal2-inputerror,
-          .swal2-popup .swal2-file.swal2-inputerror,
-          .swal2-popup .swal2-textarea.swal2-inputerror {
-            border-color: #f27474 !important;
-            -webkit-box-shadow: 0 0 2px #f27474 !important;
-                    box-shadow: 0 0 2px #f27474 !important; }
-          .swal2-popup .swal2-input:focus,
-          .swal2-popup .swal2-file:focus,
-          .swal2-popup .swal2-textarea:focus {
-            outline: none;
-            border: 1px solid #b4dbed;
-            -webkit-box-shadow: 0 0 3px #c4e6f5;
-                    box-shadow: 0 0 3px #c4e6f5; }
-          .swal2-popup .swal2-input::-webkit-input-placeholder,
-          .swal2-popup .swal2-file::-webkit-input-placeholder,
-          .swal2-popup .swal2-textarea::-webkit-input-placeholder {
-            color: #cccccc; }
-          .swal2-popup .swal2-input:-ms-input-placeholder,
-          .swal2-popup .swal2-file:-ms-input-placeholder,
-          .swal2-popup .swal2-textarea:-ms-input-placeholder {
-            color: #cccccc; }
-          .swal2-popup .swal2-input::-ms-input-placeholder,
-          .swal2-popup .swal2-file::-ms-input-placeholder,
-          .swal2-popup .swal2-textarea::-ms-input-placeholder {
-            color: #cccccc; }
-          .swal2-popup .swal2-input::placeholder,
-          .swal2-popup .swal2-file::placeholder,
-          .swal2-popup .swal2-textarea::placeholder {
-            color: #cccccc; }
-        .swal2-popup .swal2-range input {
-          float: left;
-          width: 80%; }
-        .swal2-popup .swal2-range output {
-          float: right;
-          width: 20%;
-          font-size: 20px;
-          font-weight: 600;
-          text-align: center; }
-        .swal2-popup .swal2-range input,
-        .swal2-popup .swal2-range output {
-          height: 43px;
-          line-height: 43px;
-          vertical-align: middle;
-          margin: 20px auto;
-          padding: 0; }
-        .swal2-popup .swal2-input {
-          height: 43px;
-          padding: 0 12px; }
-          .swal2-popup .swal2-input[type='number'] {
-            max-width: 150px; }
-        .swal2-popup .swal2-file {
-          font-size: 20px; }
-        .swal2-popup .swal2-textarea {
-          height: 108px;
-          padding: 12px; }
-        .swal2-popup .swal2-select {
-          color: #545454;
-          font-size: inherit;
-          padding: 5px 10px;
-          min-width: 40%;
+          text-align: center;
+          overflow-x: hidden;
+          overflow-y: auto;
+          display: none;
+          position: relative;
           max-width: 100%; }
-        .swal2-popup .swal2-radio {
-          border: 0; }
-          .swal2-popup .swal2-radio label:not(:first-child) {
-            margin-left: 20px; }
-          .swal2-popup .swal2-radio input,
-          .swal2-popup .swal2-radio span {
-            vertical-align: middle; }
-          .swal2-popup .swal2-radio input {
-            margin: 0 3px 0 0; }
-        .swal2-popup .swal2-checkbox {
-          color: #545454; }
-          .swal2-popup .swal2-checkbox input,
-          .swal2-popup .swal2-checkbox span {
-            vertical-align: middle; }
-        .swal2-popup .swal2-validationerror {
-          background-color: #f0f0f0;
-          margin: 0 -20px;
-          overflow: hidden;
-          padding: 10px;
-          color: gray;
-          font-size: 16px;
-          font-weight: 300;
-          display: none; }
-          .swal2-popup .swal2-validationerror::before {
-            content: '!';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background-color: #ea7d7d;
-            color: #fff;
-            line-height: 24px;
+          .swal2-popup.swal2-toast {
+            width: 300px;
+            padding: 0 15px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            overflow-y: hidden;
+            -webkit-box-shadow: 0 0 10px #d9d9d9;
+                    box-shadow: 0 0 10px #d9d9d9; }
+            .swal2-popup.swal2-toast .swal2-title {
+              max-width: 300px;
+              font-size: 16px;
+              text-align: left; }
+            .swal2-popup.swal2-toast .swal2-content {
+              font-size: 14px;
+              text-align: left; }
+            .swal2-popup.swal2-toast .swal2-icon {
+              width: 32px;
+              height: 32px;
+              margin: 0 15px 0 0; }
+              .swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+                width: 32px;
+                height: 32px; }
+              .swal2-popup.swal2-toast .swal2-icon.swal2-info, .swal2-popup.swal2-toast .swal2-icon.swal2-warning, .swal2-popup.swal2-toast .swal2-icon.swal2-question {
+                font-size: 26px;
+                line-height: 32px; }
+              .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+                top: 14px;
+                width: 22px; }
+                .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+                  left: 5px; }
+                .swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+                  right: 5px; }
+            .swal2-popup.swal2-toast .swal2-buttonswrapper {
+              margin: 0 0 0 5px; }
+            .swal2-popup.swal2-toast .swal2-styled {
+              margin: 0 0 0 5px;
+              padding: 5px 10px; }
+              .swal2-popup.swal2-toast .swal2-styled:focus {
+                -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4);
+                        box-shadow: 0 0 0 1px #fff, 0 0 0 2px rgba(50, 100, 150, 0.4); }
+            .swal2-popup.swal2-toast .swal2-validationerror {
+              width: 100%;
+              margin: 5px -20px; }
+            .swal2-popup.swal2-toast .swal2-success {
+              border-color: #a5dc86; }
+              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'] {
+                border-radius: 50%;
+                position: absolute;
+                width: 32px;
+                height: 64px;
+                -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg); }
+                .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+                  border-radius: 64px 0 0 64px;
+                  top: -4px;
+                  left: -15px;
+                  -webkit-transform: rotate(-45deg);
+                          transform: rotate(-45deg);
+                  -webkit-transform-origin: 32px 32px;
+                          transform-origin: 32px 32px; }
+                .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+                  border-radius: 0 64px 64px 0;
+                  top: -5px;
+                  left: 14px;
+                  -webkit-transform-origin: 0 32px;
+                          transform-origin: 0 32px; }
+              .swal2-popup.swal2-toast .swal2-success .swal2-success-ring {
+                width: 32px;
+                height: 32px; }
+              .swal2-popup.swal2-toast .swal2-success .swal2-success-fix {
+                width: 7px;
+                height: 90px;
+                left: 28px;
+                top: 8px; }
+              .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'] {
+                height: 5px; }
+                .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='tip'] {
+                  width: 12px;
+                  left: 3px;
+                  top: 18px; }
+                .swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'][class$='long'] {
+                  width: 22px;
+                  right: 3px;
+                  top: 15px; }
+            .swal2-popup.swal2-toast .swal2-animate-success-line-tip {
+              -webkit-animation: animate-toast-success-tip .75s;
+                      animation: animate-toast-success-tip .75s; }
+            .swal2-popup.swal2-toast .swal2-animate-success-line-long {
+              -webkit-animation: animate-toast-success-long .75s;
+                      animation: animate-toast-success-long .75s; }
+          .swal2-popup:focus {
+            outline: none; }
+          .swal2-popup.swal2-loading {
+            overflow-y: hidden; }
+          .swal2-popup .swal2-title {
+            color: #595959;
+            font-size: 30px;
             text-align: center;
-            margin-right: 10px; }
-
-      @supports (-ms-accelerator: true) {
-        .swal2-range input {
-          width: 100% !important; }
-        .swal2-range output {
-          display: none; } }
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        .swal2-range input {
-          width: 100% !important; }
-        .swal2-range output {
-          display: none; } }
-
-      .swal2-icon {
-        width: 80px;
-        height: 80px;
-        border: 4px solid transparent;
-        border-radius: 50%;
-        margin: 20px auto 30px;
-        padding: 0;
-        position: relative;
-        -webkit-box-sizing: content-box;
-                box-sizing: content-box;
-        cursor: default;
-        -webkit-user-select: none;
-          -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
-        .swal2-icon.swal2-error {
-          border-color: #f27474; }
-          .swal2-icon.swal2-error .swal2-x-mark {
+            font-weight: 600;
+            text-transform: none;
             position: relative;
-            display: block; }
-          .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
-            position: absolute;
-            height: 5px;
-            width: 47px;
-            background-color: #f27474;
+            margin: 0 0 .4em;
+            padding: 0;
             display: block;
-            top: 37px;
-            border-radius: 2px; }
-            .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
-              -webkit-transform: rotate(45deg);
-                      transform: rotate(45deg);
-              left: 17px; }
-            .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
-              -webkit-transform: rotate(-45deg);
-                      transform: rotate(-45deg);
-              right: 16px; }
-        .swal2-icon.swal2-warning {
-          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-          color: #f8bb86;
-          border-color: #facea8;
-          font-size: 60px;
-          line-height: 80px;
-          text-align: center; }
-        .swal2-icon.swal2-info {
-          font-family: 'Open Sans', sans-serif;
-          color: #3fc3ee;
-          border-color: #9de0f6;
-          font-size: 60px;
-          line-height: 80px;
-          text-align: center; }
-        .swal2-icon.swal2-question {
-          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-          color: #87adbd;
-          border-color: #c9dae1;
-          font-size: 60px;
-          line-height: 80px;
-          text-align: center; }
-        .swal2-icon.swal2-success {
-          border-color: #a5dc86; }
-          .swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
-            border-radius: 50%;
+            word-wrap: break-word; }
+          .swal2-popup .swal2-buttonswrapper {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            margin-top: 15px; }
+            .swal2-popup .swal2-buttonswrapper:not(.swal2-loading) .swal2-styled[disabled] {
+              opacity: .4;
+              cursor: no-drop; }
+            .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-confirm {
+              -webkit-box-sizing: border-box;
+                      box-sizing: border-box;
+              border: 4px solid transparent;
+              border-color: transparent;
+              width: 40px;
+              height: 40px;
+              padding: 0;
+              margin: 7.5px;
+              vertical-align: top;
+              background-color: transparent !important;
+              color: transparent;
+              cursor: default;
+              border-radius: 100%;
+              -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+                      animation: rotate-loading 1.5s linear 0s infinite normal;
+              -webkit-user-select: none;
+                -moz-user-select: none;
+                  -ms-user-select: none;
+                      user-select: none; }
+            .swal2-popup .swal2-buttonswrapper.swal2-loading .swal2-styled.swal2-cancel {
+              margin-left: 30px;
+              margin-right: 30px; }
+            .swal2-popup .swal2-buttonswrapper.swal2-loading :not(.swal2-styled).swal2-confirm::after {
+              display: inline-block;
+              content: '';
+              margin-left: 5px;
+              vertical-align: -1px;
+              height: 15px;
+              width: 15px;
+              border: 3px solid #999999;
+              -webkit-box-shadow: 1px 1px 1px #fff;
+                      box-shadow: 1px 1px 1px #fff;
+              border-right-color: transparent;
+              border-radius: 50%;
+              -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+                      animation: rotate-loading 1.5s linear 0s infinite normal; }
+          .swal2-popup .swal2-styled {
+            border: 0;
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 17px;
+            font-weight: 500;
+            margin: 15px 5px 0;
+            padding: 10px 32px; }
+            .swal2-popup .swal2-styled:focus {
+              outline: none;
+              -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4);
+                      box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(50, 100, 150, 0.4); }
+          .swal2-popup .swal2-image {
+            margin: 20px auto;
+            max-width: 100%; }
+          .swal2-popup .swal2-close {
+            background: transparent;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            width: 38px;
+            height: 40px;
+            font-size: 36px;
+            line-height: 40px;
+            font-family: serif;
             position: absolute;
-            width: 60px;
-            height: 120px;
-            -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg); }
-            .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='left'] {
-              border-radius: 120px 0 0 120px;
-              top: -7px;
-              left: -33px;
-              -webkit-transform: rotate(-45deg);
-                      transform: rotate(-45deg);
-              -webkit-transform-origin: 60px 60px;
-                      transform-origin: 60px 60px; }
-            .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='right'] {
-              border-radius: 0 120px 120px 0;
-              top: -11px;
-              left: 30px;
-              -webkit-transform: rotate(-45deg);
-                      transform: rotate(-45deg);
-              -webkit-transform-origin: 0 60px;
-                      transform-origin: 0 60px; }
-          .swal2-icon.swal2-success .swal2-success-ring {
-            width: 80px;
-            height: 80px;
-            border: 4px solid rgba(165, 220, 134, 0.2);
-            border-radius: 50%;
-            -webkit-box-sizing: content-box;
-                    box-sizing: content-box;
-            position: absolute;
-            left: -4px;
-            top: -4px;
-            z-index: 2; }
-          .swal2-icon.swal2-success .swal2-success-fix {
-            width: 7px;
-            height: 90px;
-            position: absolute;
-            left: 28px;
-            top: 8px;
-            z-index: 1;
-            -webkit-transform: rotate(-45deg);
-                    transform: rotate(-45deg); }
-          .swal2-icon.swal2-success [class^='swal2-success-line'] {
-            height: 5px;
-            background-color: #a5dc86;
-            display: block;
-            border-radius: 2px;
-            position: absolute;
-            z-index: 2; }
-            .swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
-              width: 25px;
-              left: 14px;
-              top: 46px;
+            top: 5px;
+            right: 8px;
+            cursor: pointer;
+            color: #cccccc;
+            -webkit-transition: color .1s ease;
+            transition: color .1s ease; }
+            .swal2-popup .swal2-close:hover {
+              color: #d55; }
+          .swal2-popup > .swal2-input,
+          .swal2-popup > .swal2-file,
+          .swal2-popup > .swal2-textarea,
+          .swal2-popup > .swal2-select,
+          .swal2-popup > .swal2-radio,
+          .swal2-popup > .swal2-checkbox {
+            display: none; }
+          .swal2-popup .swal2-content {
+            font-size: 18px;
+            text-align: center;
+            font-weight: 300;
+            position: relative;
+            float: none;
+            margin: 0;
+            padding: 0;
+            line-height: normal;
+            color: #545454;
+            word-wrap: break-word; }
+          .swal2-popup .swal2-input,
+          .swal2-popup .swal2-file,
+          .swal2-popup .swal2-textarea,
+          .swal2-popup .swal2-select,
+          .swal2-popup .swal2-radio,
+          .swal2-popup .swal2-checkbox {
+            margin: 20px auto; }
+          .swal2-popup .swal2-input,
+          .swal2-popup .swal2-file,
+          .swal2-popup .swal2-textarea {
+            width: 100%;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            font-size: 18px;
+            border-radius: 3px;
+            border: 1px solid #d9d9d9;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06);
+            -webkit-transition: border-color .3s, -webkit-box-shadow .3s;
+            transition: border-color .3s, -webkit-box-shadow .3s;
+            transition: border-color .3s, box-shadow .3s;
+            transition: border-color .3s, box-shadow .3s, -webkit-box-shadow .3s; }
+            .swal2-popup .swal2-input.swal2-inputerror,
+            .swal2-popup .swal2-file.swal2-inputerror,
+            .swal2-popup .swal2-textarea.swal2-inputerror {
+              border-color: #f27474 !important;
+              -webkit-box-shadow: 0 0 2px #f27474 !important;
+                      box-shadow: 0 0 2px #f27474 !important; }
+            .swal2-popup .swal2-input:focus,
+            .swal2-popup .swal2-file:focus,
+            .swal2-popup .swal2-textarea:focus {
+              outline: none;
+              border: 1px solid #b4dbed;
+              -webkit-box-shadow: 0 0 3px #c4e6f5;
+                      box-shadow: 0 0 3px #c4e6f5; }
+            .swal2-popup .swal2-input::-webkit-input-placeholder,
+            .swal2-popup .swal2-file::-webkit-input-placeholder,
+            .swal2-popup .swal2-textarea::-webkit-input-placeholder {
+              color: #cccccc; }
+            .swal2-popup .swal2-input:-ms-input-placeholder,
+            .swal2-popup .swal2-file:-ms-input-placeholder,
+            .swal2-popup .swal2-textarea:-ms-input-placeholder {
+              color: #cccccc; }
+            .swal2-popup .swal2-input::-ms-input-placeholder,
+            .swal2-popup .swal2-file::-ms-input-placeholder,
+            .swal2-popup .swal2-textarea::-ms-input-placeholder {
+              color: #cccccc; }
+            .swal2-popup .swal2-input::placeholder,
+            .swal2-popup .swal2-file::placeholder,
+            .swal2-popup .swal2-textarea::placeholder {
+              color: #cccccc; }
+          .swal2-popup .swal2-range input {
+            float: left;
+            width: 80%; }
+          .swal2-popup .swal2-range output {
+            float: right;
+            width: 20%;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center; }
+          .swal2-popup .swal2-range input,
+          .swal2-popup .swal2-range output {
+            height: 43px;
+            line-height: 43px;
+            vertical-align: middle;
+            margin: 20px auto;
+            padding: 0; }
+          .swal2-popup .swal2-input {
+            height: 43px;
+            padding: 0 12px; }
+            .swal2-popup .swal2-input[type='number'] {
+              max-width: 150px; }
+          .swal2-popup .swal2-file {
+            font-size: 20px; }
+          .swal2-popup .swal2-textarea {
+            height: 108px;
+            padding: 12px; }
+          .swal2-popup .swal2-select {
+            color: #545454;
+            font-size: inherit;
+            padding: 5px 10px;
+            min-width: 40%;
+            max-width: 100%; }
+          .swal2-popup .swal2-radio {
+            border: 0; }
+            .swal2-popup .swal2-radio label:not(:first-child) {
+              margin-left: 20px; }
+            .swal2-popup .swal2-radio input,
+            .swal2-popup .swal2-radio span {
+              vertical-align: middle; }
+            .swal2-popup .swal2-radio input {
+              margin: 0 3px 0 0; }
+          .swal2-popup .swal2-checkbox {
+            color: #545454; }
+            .swal2-popup .swal2-checkbox input,
+            .swal2-popup .swal2-checkbox span {
+              vertical-align: middle; }
+          .swal2-popup .swal2-validationerror {
+            background-color: #f0f0f0;
+            margin: 0 -20px;
+            overflow: hidden;
+            padding: 10px;
+            color: gray;
+            font-size: 16px;
+            font-weight: 300;
+            display: none; }
+            .swal2-popup .swal2-validationerror::before {
+              content: '!';
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+              background-color: #ea7d7d;
+              color: #fff;
+              line-height: 24px;
+              text-align: center;
+              margin-right: 10px; }
+  
+        @supports (-ms-accelerator: true) {
+          .swal2-range input {
+            width: 100% !important; }
+          .swal2-range output {
+            display: none; } }
+  
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          .swal2-range input {
+            width: 100% !important; }
+          .swal2-range output {
+            display: none; } }
+  
+        .swal2-icon {
+          width: 80px;
+          height: 80px;
+          border: 4px solid transparent;
+          border-radius: 50%;
+          margin: 20px auto 30px;
+          padding: 0;
+          position: relative;
+          -webkit-box-sizing: content-box;
+                  box-sizing: content-box;
+          cursor: default;
+          -webkit-user-select: none;
+            -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none; }
+          .swal2-icon.swal2-error {
+            border-color: #f27474; }
+            .swal2-icon.swal2-error .swal2-x-mark {
+              position: relative;
+              display: block; }
+            .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+              position: absolute;
+              height: 5px;
+              width: 47px;
+              background-color: #f27474;
+              display: block;
+              top: 37px;
+              border-radius: 2px; }
+              .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+                -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                left: 17px; }
+              .swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                right: 16px; }
+          .swal2-icon.swal2-warning {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #f8bb86;
+            border-color: #facea8;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center; }
+          .swal2-icon.swal2-info {
+            font-family: 'Open Sans', sans-serif;
+            color: #3fc3ee;
+            border-color: #9de0f6;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center; }
+          .swal2-icon.swal2-question {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #87adbd;
+            border-color: #c9dae1;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center; }
+          .swal2-icon.swal2-success {
+            border-color: #a5dc86; }
+            .swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
+              border-radius: 50%;
+              position: absolute;
+              width: 60px;
+              height: 120px;
               -webkit-transform: rotate(45deg);
                       transform: rotate(45deg); }
-            .swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
-              width: 47px;
-              right: 8px;
-              top: 38px;
+              .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='left'] {
+                border-radius: 120px 0 0 120px;
+                top: -7px;
+                left: -33px;
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                -webkit-transform-origin: 60px 60px;
+                        transform-origin: 60px 60px; }
+              .swal2-icon.swal2-success [class^='swal2-success-circular-line'][class$='right'] {
+                border-radius: 0 120px 120px 0;
+                top: -11px;
+                left: 30px;
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg);
+                -webkit-transform-origin: 0 60px;
+                        transform-origin: 0 60px; }
+            .swal2-icon.swal2-success .swal2-success-ring {
+              width: 80px;
+              height: 80px;
+              border: 4px solid rgba(165, 220, 134, 0.2);
+              border-radius: 50%;
+              -webkit-box-sizing: content-box;
+                      box-sizing: content-box;
+              position: absolute;
+              left: -4px;
+              top: -4px;
+              z-index: 2; }
+            .swal2-icon.swal2-success .swal2-success-fix {
+              width: 7px;
+              height: 90px;
+              position: absolute;
+              left: 28px;
+              top: 8px;
+              z-index: 1;
               -webkit-transform: rotate(-45deg);
                       transform: rotate(-45deg); }
-
-      .swal2-progresssteps {
-        font-weight: 600;
-        margin: 0 0 20px;
-        padding: 0; }
-        .swal2-progresssteps li {
-          display: inline-block;
-          position: relative; }
-        .swal2-progresssteps .swal2-progresscircle {
-          background: #3085d6;
-          border-radius: 2em;
-          color: #fff;
-          height: 2em;
-          line-height: 2em;
-          text-align: center;
-          width: 2em;
-          z-index: 20; }
-          .swal2-progresssteps .swal2-progresscircle:first-child {
-            margin-left: 0; }
-          .swal2-progresssteps .swal2-progresscircle:last-child {
-            margin-right: 0; }
-          .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
-            background: #3085d6; }
-            .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
-              background: #add8e6; }
-            .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
-              background: #add8e6; }
-        .swal2-progresssteps .swal2-progressline {
-          background: #3085d6;
-          height: .4em;
-          margin: 0 -1px;
-          z-index: 10; }
-
-      [class^='swal2'] {
-        -webkit-tap-highlight-color: transparent; }
-
-      @-webkit-keyframes showSweetToast {
-        0% {
-          -webkit-transform: translateY(-10px) rotateZ(2deg);
-                  transform: translateY(-10px) rotateZ(2deg);
-          opacity: 0; }
-        33% {
-          -webkit-transform: translateY(0) rotateZ(-2deg);
-                  transform: translateY(0) rotateZ(-2deg);
-          opacity: .5; }
-        66% {
-          -webkit-transform: translateY(5px) rotateZ(2deg);
-                  transform: translateY(5px) rotateZ(2deg);
-          opacity: .7; }
-        100% {
-          -webkit-transform: translateY(0) rotateZ(0);
-                  transform: translateY(0) rotateZ(0);
-          opacity: 1; } }
-
-      @keyframes showSweetToast {
-        0% {
-          -webkit-transform: translateY(-10px) rotateZ(2deg);
-                  transform: translateY(-10px) rotateZ(2deg);
-          opacity: 0; }
-        33% {
-          -webkit-transform: translateY(0) rotateZ(-2deg);
-                  transform: translateY(0) rotateZ(-2deg);
-          opacity: .5; }
-        66% {
-          -webkit-transform: translateY(5px) rotateZ(2deg);
-                  transform: translateY(5px) rotateZ(2deg);
-          opacity: .7; }
-        100% {
-          -webkit-transform: translateY(0) rotateZ(0);
-                  transform: translateY(0) rotateZ(0);
-          opacity: 1; } }
-
-      @-webkit-keyframes hideSweetToast {
-        0% {
-          opacity: 1; }
-        33% {
-          opacity: .5; }
-        100% {
-          -webkit-transform: rotateZ(1deg);
-                  transform: rotateZ(1deg);
-          opacity: 0; } }
-
-      @keyframes hideSweetToast {
-        0% {
-          opacity: 1; }
-        33% {
-          opacity: .5; }
-        100% {
-          -webkit-transform: rotateZ(1deg);
-                  transform: rotateZ(1deg);
-          opacity: 0; } }
-
-      @-webkit-keyframes showSweetAlert {
-        0% {
-          -webkit-transform: scale(0.7);
-                  transform: scale(0.7); }
-        45% {
-          -webkit-transform: scale(1.05);
-                  transform: scale(1.05); }
-        80% {
-          -webkit-transform: scale(0.95);
-                  transform: scale(0.95); }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1); } }
-
-      @keyframes showSweetAlert {
-        0% {
-          -webkit-transform: scale(0.7);
-                  transform: scale(0.7); }
-        45% {
-          -webkit-transform: scale(1.05);
-                  transform: scale(1.05); }
-        80% {
-          -webkit-transform: scale(0.95);
-                  transform: scale(0.95); }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1); } }
-
-      @-webkit-keyframes hideSweetAlert {
-        0% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          opacity: 1; }
-        100% {
-          -webkit-transform: scale(0.5);
-                  transform: scale(0.5);
-          opacity: 0; } }
-
-      @keyframes hideSweetAlert {
-        0% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          opacity: 1; }
-        100% {
-          -webkit-transform: scale(0.5);
-                  transform: scale(0.5);
-          opacity: 0; } }
-
-      .swal2-show {
-        -webkit-animation: showSweetAlert .3s;
-                animation: showSweetAlert .3s; }
-        .swal2-show.swal2-toast {
-          -webkit-animation: showSweetToast .5s;
-                  animation: showSweetToast .5s; }
-        .swal2-show.swal2-noanimation {
-          -webkit-animation: none;
-                  animation: none; }
-
-      .swal2-hide {
-        -webkit-animation: hideSweetAlert .15s forwards;
-                animation: hideSweetAlert .15s forwards; }
-        .swal2-hide.swal2-toast {
-          -webkit-animation: hideSweetToast .2s forwards;
-                  animation: hideSweetToast .2s forwards; }
-        .swal2-hide.swal2-noanimation {
-          -webkit-animation: none;
-                  animation: none; }
-
-      @-webkit-keyframes animate-success-tip {
-        0% {
-          width: 0;
-          left: 1px;
-          top: 19px; }
-        54% {
-          width: 0;
-          left: 1px;
-          top: 19px; }
-        70% {
-          width: 50px;
-          left: -8px;
-          top: 37px; }
-        84% {
-          width: 17px;
-          left: 21px;
-          top: 48px; }
-        100% {
-          width: 25px;
-          left: 14px;
-          top: 45px; } }
-
-      @keyframes animate-success-tip {
-        0% {
-          width: 0;
-          left: 1px;
-          top: 19px; }
-        54% {
-          width: 0;
-          left: 1px;
-          top: 19px; }
-        70% {
-          width: 50px;
-          left: -8px;
-          top: 37px; }
-        84% {
-          width: 17px;
-          left: 21px;
-          top: 48px; }
-        100% {
-          width: 25px;
-          left: 14px;
-          top: 45px; } }
-
-      @-webkit-keyframes animate-success-long {
-        0% {
-          width: 0;
-          right: 46px;
-          top: 54px; }
-        65% {
-          width: 0;
-          right: 46px;
-          top: 54px; }
-        84% {
-          width: 55px;
-          right: 0;
-          top: 35px; }
-        100% {
-          width: 47px;
-          right: 8px;
-          top: 38px; } }
-
-      @keyframes animate-success-long {
-        0% {
-          width: 0;
-          right: 46px;
-          top: 54px; }
-        65% {
-          width: 0;
-          right: 46px;
-          top: 54px; }
-        84% {
-          width: 55px;
-          right: 0;
-          top: 35px; }
-        100% {
-          width: 47px;
-          right: 8px;
-          top: 38px; } }
-
-      @-webkit-keyframes animate-toast-success-tip {
-        0% {
-          width: 0;
-          left: 1px;
-          top: 9px; }
-        54% {
-          width: 0;
-          left: 1px;
-          top: 9px; }
-        70% {
-          width: 24px;
-          left: -4px;
-          top: 17px; }
-        84% {
-          width: 8px;
-          left: 10px;
-          top: 20px; }
-        100% {
-          width: 12px;
-          left: 3px;
-          top: 18px; } }
-
-      @keyframes animate-toast-success-tip {
-        0% {
-          width: 0;
-          left: 1px;
-          top: 9px; }
-        54% {
-          width: 0;
-          left: 1px;
-          top: 9px; }
-        70% {
-          width: 24px;
-          left: -4px;
-          top: 17px; }
-        84% {
-          width: 8px;
-          left: 10px;
-          top: 20px; }
-        100% {
-          width: 12px;
-          left: 3px;
-          top: 18px; } }
-
-      @-webkit-keyframes animate-toast-success-long {
-        0% {
-          width: 0;
-          right: 22px;
-          top: 26px; }
-        65% {
-          width: 0;
-          right: 22px;
-          top: 26px; }
-        84% {
-          width: 26px;
-          right: 0;
-          top: 15px; }
-        100% {
-          width: 22px;
-          right: 3px;
-          top: 15px; } }
-
-      @keyframes animate-toast-success-long {
-        0% {
-          width: 0;
-          right: 22px;
-          top: 26px; }
-        65% {
-          width: 0;
-          right: 22px;
-          top: 26px; }
-        84% {
-          width: 26px;
-          right: 0;
-          top: 15px; }
-        100% {
-          width: 22px;
-          right: 3px;
-          top: 15px; } }
-
-      @-webkit-keyframes rotatePlaceholder {
-        0% {
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        5% {
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        12% {
-          -webkit-transform: rotate(-405deg);
-                  transform: rotate(-405deg); }
-        100% {
-          -webkit-transform: rotate(-405deg);
-                  transform: rotate(-405deg); } }
-
-      @keyframes rotatePlaceholder {
-        0% {
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        5% {
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        12% {
-          -webkit-transform: rotate(-405deg);
-                  transform: rotate(-405deg); }
-        100% {
-          -webkit-transform: rotate(-405deg);
-                  transform: rotate(-405deg); } }
-
-      .swal2-animate-success-line-tip {
-        -webkit-animation: animate-success-tip .75s;
-                animation: animate-success-tip .75s; }
-
-      .swal2-animate-success-line-long {
-        -webkit-animation: animate-success-long .75s;
-                animation: animate-success-long .75s; }
-
-      .swal2-success.swal2-animate-success-icon .swal2-success-circular-line-right {
-        -webkit-animation: rotatePlaceholder 4.25s ease-in;
-                animation: rotatePlaceholder 4.25s ease-in; }
-
-      @-webkit-keyframes animate-error-icon {
-        0% {
-          -webkit-transform: rotateX(100deg);
-                  transform: rotateX(100deg);
-          opacity: 0; }
-        100% {
-          -webkit-transform: rotateX(0deg);
-                  transform: rotateX(0deg);
-          opacity: 1; } }
-
-      @keyframes animate-error-icon {
-        0% {
-          -webkit-transform: rotateX(100deg);
-                  transform: rotateX(100deg);
-          opacity: 0; }
-        100% {
-          -webkit-transform: rotateX(0deg);
-                  transform: rotateX(0deg);
-          opacity: 1; } }
-
-      .swal2-animate-error-icon {
-        -webkit-animation: animate-error-icon .5s;
-                animation: animate-error-icon .5s; }
-
-      @-webkit-keyframes animate-x-mark {
-        0% {
-          -webkit-transform: scale(0.4);
-                  transform: scale(0.4);
-          margin-top: 26px;
-          opacity: 0; }
-        50% {
-          -webkit-transform: scale(0.4);
-                  transform: scale(0.4);
-          margin-top: 26px;
-          opacity: 0; }
-        80% {
-          -webkit-transform: scale(1.15);
-                  transform: scale(1.15);
-          margin-top: -6px; }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          margin-top: 0;
-          opacity: 1; } }
-
-      @keyframes animate-x-mark {
-        0% {
-          -webkit-transform: scale(0.4);
-                  transform: scale(0.4);
-          margin-top: 26px;
-          opacity: 0; }
-        50% {
-          -webkit-transform: scale(0.4);
-                  transform: scale(0.4);
-          margin-top: 26px;
-          opacity: 0; }
-        80% {
-          -webkit-transform: scale(1.15);
-                  transform: scale(1.15);
-          margin-top: -6px; }
-        100% {
-          -webkit-transform: scale(1);
-                  transform: scale(1);
-          margin-top: 0;
-          opacity: 1; } }
-
-      .swal2-animate-x-mark {
-        -webkit-animation: animate-x-mark .5s;
-                animation: animate-x-mark .5s; }
-
-      @-webkit-keyframes rotate-loading {
-        0% {
-          -webkit-transform: rotate(0deg);
-                  transform: rotate(0deg); }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg); } }
-
-      @keyframes rotate-loading {
-        0% {
-          -webkit-transform: rotate(0deg);
-                  transform: rotate(0deg); }
-        100% {
-          -webkit-transform: rotate(360deg);
-                  transform: rotate(360deg); } }
-    </style>
+            .swal2-icon.swal2-success [class^='swal2-success-line'] {
+              height: 5px;
+              background-color: #a5dc86;
+              display: block;
+              border-radius: 2px;
+              position: absolute;
+              z-index: 2; }
+              .swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
+                width: 25px;
+                left: 14px;
+                top: 46px;
+                -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg); }
+              .swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
+                width: 47px;
+                right: 8px;
+                top: 38px;
+                -webkit-transform: rotate(-45deg);
+                        transform: rotate(-45deg); }
+  
+        .swal2-progresssteps {
+          font-weight: 600;
+          margin: 0 0 20px;
+          padding: 0; }
+          .swal2-progresssteps li {
+            display: inline-block;
+            position: relative; }
+          .swal2-progresssteps .swal2-progresscircle {
+            background: #3085d6;
+            border-radius: 2em;
+            color: #fff;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            width: 2em;
+            z-index: 20; }
+            .swal2-progresssteps .swal2-progresscircle:first-child {
+              margin-left: 0; }
+            .swal2-progresssteps .swal2-progresscircle:last-child {
+              margin-right: 0; }
+            .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep {
+              background: #3085d6; }
+              .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progresscircle {
+                background: #add8e6; }
+              .swal2-progresssteps .swal2-progresscircle.swal2-activeprogressstep ~ .swal2-progressline {
+                background: #add8e6; }
+          .swal2-progresssteps .swal2-progressline {
+            background: #3085d6;
+            height: .4em;
+            margin: 0 -1px;
+            z-index: 10; }
+  
+        [class^='swal2'] {
+          -webkit-tap-highlight-color: transparent; }
+  
+        @-webkit-keyframes showSweetToast {
+          0% {
+            -webkit-transform: translateY(-10px) rotateZ(2deg);
+                    transform: translateY(-10px) rotateZ(2deg);
+            opacity: 0; }
+          33% {
+            -webkit-transform: translateY(0) rotateZ(-2deg);
+                    transform: translateY(0) rotateZ(-2deg);
+            opacity: .5; }
+          66% {
+            -webkit-transform: translateY(5px) rotateZ(2deg);
+                    transform: translateY(5px) rotateZ(2deg);
+            opacity: .7; }
+          100% {
+            -webkit-transform: translateY(0) rotateZ(0);
+                    transform: translateY(0) rotateZ(0);
+            opacity: 1; } }
+  
+        @keyframes showSweetToast {
+          0% {
+            -webkit-transform: translateY(-10px) rotateZ(2deg);
+                    transform: translateY(-10px) rotateZ(2deg);
+            opacity: 0; }
+          33% {
+            -webkit-transform: translateY(0) rotateZ(-2deg);
+                    transform: translateY(0) rotateZ(-2deg);
+            opacity: .5; }
+          66% {
+            -webkit-transform: translateY(5px) rotateZ(2deg);
+                    transform: translateY(5px) rotateZ(2deg);
+            opacity: .7; }
+          100% {
+            -webkit-transform: translateY(0) rotateZ(0);
+                    transform: translateY(0) rotateZ(0);
+            opacity: 1; } }
+  
+        @-webkit-keyframes hideSweetToast {
+          0% {
+            opacity: 1; }
+          33% {
+            opacity: .5; }
+          100% {
+            -webkit-transform: rotateZ(1deg);
+                    transform: rotateZ(1deg);
+            opacity: 0; } }
+  
+        @keyframes hideSweetToast {
+          0% {
+            opacity: 1; }
+          33% {
+            opacity: .5; }
+          100% {
+            -webkit-transform: rotateZ(1deg);
+                    transform: rotateZ(1deg);
+            opacity: 0; } }
+  
+        @-webkit-keyframes showSweetAlert {
+          0% {
+            -webkit-transform: scale(0.7);
+                    transform: scale(0.7); }
+          45% {
+            -webkit-transform: scale(1.05);
+                    transform: scale(1.05); }
+          80% {
+            -webkit-transform: scale(0.95);
+                    transform: scale(0.95); }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1); } }
+  
+        @keyframes showSweetAlert {
+          0% {
+            -webkit-transform: scale(0.7);
+                    transform: scale(0.7); }
+          45% {
+            -webkit-transform: scale(1.05);
+                    transform: scale(1.05); }
+          80% {
+            -webkit-transform: scale(0.95);
+                    transform: scale(0.95); }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1); } }
+  
+        @-webkit-keyframes hideSweetAlert {
+          0% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            opacity: 1; }
+          100% {
+            -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+            opacity: 0; } }
+  
+        @keyframes hideSweetAlert {
+          0% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            opacity: 1; }
+          100% {
+            -webkit-transform: scale(0.5);
+                    transform: scale(0.5);
+            opacity: 0; } }
+  
+        .swal2-show {
+          -webkit-animation: showSweetAlert .3s;
+                  animation: showSweetAlert .3s; }
+          .swal2-show.swal2-toast {
+            -webkit-animation: showSweetToast .5s;
+                    animation: showSweetToast .5s; }
+          .swal2-show.swal2-noanimation {
+            -webkit-animation: none;
+                    animation: none; }
+  
+        .swal2-hide {
+          -webkit-animation: hideSweetAlert .15s forwards;
+                  animation: hideSweetAlert .15s forwards; }
+          .swal2-hide.swal2-toast {
+            -webkit-animation: hideSweetToast .2s forwards;
+                    animation: hideSweetToast .2s forwards; }
+          .swal2-hide.swal2-noanimation {
+            -webkit-animation: none;
+                    animation: none; }
+  
+        @-webkit-keyframes animate-success-tip {
+          0% {
+            width: 0;
+            left: 1px;
+            top: 19px; }
+          54% {
+            width: 0;
+            left: 1px;
+            top: 19px; }
+          70% {
+            width: 50px;
+            left: -8px;
+            top: 37px; }
+          84% {
+            width: 17px;
+            left: 21px;
+            top: 48px; }
+          100% {
+            width: 25px;
+            left: 14px;
+            top: 45px; } }
+  
+        @keyframes animate-success-tip {
+          0% {
+            width: 0;
+            left: 1px;
+            top: 19px; }
+          54% {
+            width: 0;
+            left: 1px;
+            top: 19px; }
+          70% {
+            width: 50px;
+            left: -8px;
+            top: 37px; }
+          84% {
+            width: 17px;
+            left: 21px;
+            top: 48px; }
+          100% {
+            width: 25px;
+            left: 14px;
+            top: 45px; } }
+  
+        @-webkit-keyframes animate-success-long {
+          0% {
+            width: 0;
+            right: 46px;
+            top: 54px; }
+          65% {
+            width: 0;
+            right: 46px;
+            top: 54px; }
+          84% {
+            width: 55px;
+            right: 0;
+            top: 35px; }
+          100% {
+            width: 47px;
+            right: 8px;
+            top: 38px; } }
+  
+        @keyframes animate-success-long {
+          0% {
+            width: 0;
+            right: 46px;
+            top: 54px; }
+          65% {
+            width: 0;
+            right: 46px;
+            top: 54px; }
+          84% {
+            width: 55px;
+            right: 0;
+            top: 35px; }
+          100% {
+            width: 47px;
+            right: 8px;
+            top: 38px; } }
+  
+        @-webkit-keyframes animate-toast-success-tip {
+          0% {
+            width: 0;
+            left: 1px;
+            top: 9px; }
+          54% {
+            width: 0;
+            left: 1px;
+            top: 9px; }
+          70% {
+            width: 24px;
+            left: -4px;
+            top: 17px; }
+          84% {
+            width: 8px;
+            left: 10px;
+            top: 20px; }
+          100% {
+            width: 12px;
+            left: 3px;
+            top: 18px; } }
+  
+        @keyframes animate-toast-success-tip {
+          0% {
+            width: 0;
+            left: 1px;
+            top: 9px; }
+          54% {
+            width: 0;
+            left: 1px;
+            top: 9px; }
+          70% {
+            width: 24px;
+            left: -4px;
+            top: 17px; }
+          84% {
+            width: 8px;
+            left: 10px;
+            top: 20px; }
+          100% {
+            width: 12px;
+            left: 3px;
+            top: 18px; } }
+  
+        @-webkit-keyframes animate-toast-success-long {
+          0% {
+            width: 0;
+            right: 22px;
+            top: 26px; }
+          65% {
+            width: 0;
+            right: 22px;
+            top: 26px; }
+          84% {
+            width: 26px;
+            right: 0;
+            top: 15px; }
+          100% {
+            width: 22px;
+            right: 3px;
+            top: 15px; } }
+  
+        @keyframes animate-toast-success-long {
+          0% {
+            width: 0;
+            right: 22px;
+            top: 26px; }
+          65% {
+            width: 0;
+            right: 22px;
+            top: 26px; }
+          84% {
+            width: 26px;
+            right: 0;
+            top: 15px; }
+          100% {
+            width: 22px;
+            right: 3px;
+            top: 15px; } }
+  
+        @-webkit-keyframes rotatePlaceholder {
+          0% {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg); }
+          5% {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg); }
+          12% {
+            -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg); }
+          100% {
+            -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg); } }
+  
+        @keyframes rotatePlaceholder {
+          0% {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg); }
+          5% {
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg); }
+          12% {
+            -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg); }
+          100% {
+            -webkit-transform: rotate(-405deg);
+                    transform: rotate(-405deg); } }
+  
+        .swal2-animate-success-line-tip {
+          -webkit-animation: animate-success-tip .75s;
+                  animation: animate-success-tip .75s; }
+  
+        .swal2-animate-success-line-long {
+          -webkit-animation: animate-success-long .75s;
+                  animation: animate-success-long .75s; }
+  
+        .swal2-success.swal2-animate-success-icon .swal2-success-circular-line-right {
+          -webkit-animation: rotatePlaceholder 4.25s ease-in;
+                  animation: rotatePlaceholder 4.25s ease-in; }
+  
+        @-webkit-keyframes animate-error-icon {
+          0% {
+            -webkit-transform: rotateX(100deg);
+                    transform: rotateX(100deg);
+            opacity: 0; }
+          100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            opacity: 1; } }
+  
+        @keyframes animate-error-icon {
+          0% {
+            -webkit-transform: rotateX(100deg);
+                    transform: rotateX(100deg);
+            opacity: 0; }
+          100% {
+            -webkit-transform: rotateX(0deg);
+                    transform: rotateX(0deg);
+            opacity: 1; } }
+  
+        .swal2-animate-error-icon {
+          -webkit-animation: animate-error-icon .5s;
+                  animation: animate-error-icon .5s; }
+  
+        @-webkit-keyframes animate-x-mark {
+          0% {
+            -webkit-transform: scale(0.4);
+                    transform: scale(0.4);
+            margin-top: 26px;
+            opacity: 0; }
+          50% {
+            -webkit-transform: scale(0.4);
+                    transform: scale(0.4);
+            margin-top: 26px;
+            opacity: 0; }
+          80% {
+            -webkit-transform: scale(1.15);
+                    transform: scale(1.15);
+            margin-top: -6px; }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            margin-top: 0;
+            opacity: 1; } }
+  
+        @keyframes animate-x-mark {
+          0% {
+            -webkit-transform: scale(0.4);
+                    transform: scale(0.4);
+            margin-top: 26px;
+            opacity: 0; }
+          50% {
+            -webkit-transform: scale(0.4);
+                    transform: scale(0.4);
+            margin-top: 26px;
+            opacity: 0; }
+          80% {
+            -webkit-transform: scale(1.15);
+                    transform: scale(1.15);
+            margin-top: -6px; }
+          100% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            margin-top: 0;
+            opacity: 1; } }
+  
+        .swal2-animate-x-mark {
+          -webkit-animation: animate-x-mark .5s;
+                  animation: animate-x-mark .5s; }
+  
+        @-webkit-keyframes rotate-loading {
+          0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg); }
+          100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg); } }
+  
+        @keyframes rotate-loading {
+          0% {
+            -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg); }
+          100% {
+            -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg); } }
+      </style>
 </head>
-<body cz-shortcut-listen="true">
-  <script type="text/javascript" src="https://ssl.nexon.com/s1/global/ngb_bodystart.js" charset="euc-kr"></script>
-    
-<div id="wrapper" style="padding-top: 115px;">
-    <div id="loader" style="opacity: 0; display: none;"></div>
-    
+<body>
+    <div id="wrapper" style="padding-top: 115px;">
+        <main id="middle" class="middle change" role="main">
+            <section class="event _01 section">
+                <div class="inner">
+                    <!-- 이벤트 : s -->
+                    <div id="combination" class="clearfix">
 
-    <link href="/Content/220908/header.css?t=2022-09-21 17:55" rel="stylesheet">
-    <script src="https://ssl.nexon.com/s1/fo4/plugin/sly.min.js"></script>
-    <script src="/Content/220908/header.js?t=2022-09-21 17:55"></script>
-    <script type="text/javascript">
-        $(function () {
-            $(".btn_login").on("click", Navi.Login).css("cursor", "pointer");
-            $(".btn_logout").on("click", Navi.Logout);
-            $(".btn_gamestart").on("click", Navi.GameStart);
+                        <div class="step_01 active">
+                            <dl>
+                                <dt>
+                                    1.클래스
+                                    <div class="tooltip">
+                                        <div class="detail">
+                                            <p>
+                                                <span class="title">1강 기준 선수 OVR</span>
+                                                NHD/LIVE/TB : OVR 75 이상<br>
+                                                TKL/TC/GR/TT : OVR 80 이상<br>
+                                                BOE21/UP/MC/LH/HOT : 제한 없음
+                                            </p>
+                                        </div>
+                                    </div>
+                                </dt>
 
-        });
-
-        var Navi = {
-            Login: function (e) {
-                top.PS.nxlogin.showLoginLayer();
-                if (e != null) e.preventDefault();
-            },
-            Logout: function (e) {
-                NgbLogin.Logout();
-                if (e != null) e.preventDefault();
-            },
-            GameStart: function () {
-                GnxGameStartOnClick();
-            }
-        }
-
-        function GnxGameStartOnClick(argument) {
-                
-                top.PS.nxlogin.showLoginLayer();
-                
-        }
-
-        var EventHeader = {
-            dtToday: "",
-            IsRunning: false,
-            GetPointInfo: function (obj) {
-                if (DefaultCheck()) {
-                    $(obj).attr("onclick", "return false;");
-
-                    var url = location.href.toLowerCase();
-                    var isOut = false;
-
-                    if ((url.indexOf("/220908/shoot") > -1 || url.indexOf("/220908/playerpack") > -1) && url.indexOf("/220908/pointmilestone") < 0)
-                    {
-                        isOut = false;
-                    }
-                    else
-                    {
-                        isOut = true;
-                    }
-
-                    if (isOut) {
-                        $.ajax({
-                            cache: false,
-                            method: "POST",
-                            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                            url: '/220908/MissionAjax',
-                            dataType: 'json',
-                            data: { "__RequestVerificationToken": $("input[name=__RequestVerificationToken]").val(), "strMethod": "getPlayInfo", "n4RewardType": 1, rd: Math.random() },
-                            beforeSend: function () {
-                                checkStart();
-                            },
-                            success: function (data) {
-                                $("#header-event-info2").text(data.weekCoin == null ? 0 : (data.weekCoin - data.weekuseCoin));
-                                $("#header-event-info3").text(data.todaypoint == null ? 0 : data.todaypoint);
-                            },
-                            error: function (xhr, status, exception) {
-                                alert("죄송합니다. 잠시후 다시 시도해주세요.");
-                            },
-                            complete: function () {
-                                setTimeout(function () {
-                                    $(obj).attr("onclick", "EventHeader.GetPointInfo(this);  return false;");
-                                    checkEnd();
-                                }, 1000);
-                            }
-                        });
-                    }
-                    else {
-                        $(".btn_check").click();
-                        $(obj).attr("onclick", "EventHeader.GetPointInfo(this);  return false;");
-                    }
-                }
-                return false;
-            }
-        }
-
-        function fnGetNewAndReturnGNBInfo() {
-            $.ajaxSetup({ cache: false });
-            $.ajax({
-                type: "POST",
-                url: "/220908/GetNewAndReturnGNBInfo",
-                data: { __RequestVerificationToken: $("input[name=__RequestVerificationToken]").val() },
-                dataType: "json",
-                beforeSend: function () {
-                },
-                success: function (res) {
-                    switch (res.result) {
-                        case 0:
-                            if (res.strType == "N") {
-                                $("#NewAndReturnArea").html("신규 혜택");
-                                $("#NewAndReturnArea").show();
-                            }
-                            else if (res.strType == "R") {
-                                $("#NewAndReturnArea").html("복귀 혜택");
-                                $("#NewAndReturnArea").show();
-                            }
-                            else {
-                                $("#NewAndReturnArea").hide();
-                            }
-                            break;
-                        default:
-                            if (res.result < 0) {
-                            }
-                            break;
-                    }
-                },
-                error: function () {
-                }
-            });
-      }
-    </script>
-
-    <section id="gnb">
-        <header id="header">
-            <h1 class="btn_logo"><a href="https://fifaonline4.nexon.com/main/index"><p class="hidden">EA SPORTS™ FIFA ONLINE 4</p></a></h1>
-            
-
-            <div class="menu">
-                <a href="https://events.fifaonline4.nexon.com/220908/pcbang?utm_source=pc&amp;utm_medium=evGnbTop&amp;utm_campaign=220908_premium" target="_blank"><div class="premium "></div></a>
-
-                    <button type="button" onclick="return false;" class="btn_login" style="cursor: pointer;"><p class="hidden">로그인</p></button>
-
-                <button type="button" onclick="return false;" class="btn_gamestart"><p class="hidden">GAME START</p></button>
-                <button type="button" onclick="return false;" class="btn_control">
-                    <div class="inner"><span>메뉴</span></div>
-                </button>
-            </div>
-        </header>
-        <aside id="aside" class="">
-            <div class="button_box">
-                <a href="https://fifaonline4.nexon.com/main/index" class="btn_home">공홈</a>
-                <a href="#none" onclick="return false;" class="btn_share">공유</a>
-            </div>
-            <div class="scroll_box" style="height: 823px; overflow: hidden;">
-                <ul style="transform: translateZ(0px); height: 2064px;">
-                    <li><a href="https://events.fifaonline4.nexon.com/TrophyShop22SH/Index?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220701_trophy" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220630_trophy_10ddf_gnb.png" alt=""></div><p>2022.7.1(금) ~ 12.31(토)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220825/Update?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220825_newclass" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220825_newclass_gnb.png" alt=""></div><p>2022.8.25(목) ~ </p></a></li><li><a href="https://shop.fifaonline4.nexon.com/SkyBoxPass?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220908_SkyBoxPass" target="_blank"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_skypassbox_gnb_asfdn11.png" alt=""></div><p>2022.9.8(목) ~ 10.5(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220909/Burning?utm_source=pc&amp;utm_medium=evGNB&amp;utm_campaign=Chuseok" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_burning_GNB.png" alt=""></div><p>2022.9.9(금) ~ 9.12(월)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220728/KLeagueOnAir?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220728_KLeagueOnAir" target="_blank"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/20220728_banner_flkl_GNB.png" alt=""></div><p>2022.8.7(일) ~ </p></a></li><li><a href="https://events.fifaonline4.nexon.com/220908/saturday?utm_source=pc&amp;utm_medium=evGNB&amp;utm_campaign=220917_fo4sat" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_fo4sat_Yctch1_gnb.png" alt=""></div><p> 9.17(토) 부터 매주 토요일!</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220908/shoot?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220908_shoot" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_Shoot_asdwg_GNB.png" alt=""></div><p>[참여] ~ 11.02(수) /  [보상] ~11.09(수)</p></a></li><li class="on"><a href="https://events.fifaonline4.nexon.com/220908/playerpack?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220908_mission" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/0908_DIY_qfwfs_gnb.png" alt=""></div><p>[교환] ~ 2022.11.09(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220804/NewAndReturn?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220804_newandreturn" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_0804_newreturn_GNB.png" alt=""></div><p>2022.8.4(목) ~ 9.7(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220908/pcbang?utm_source=pc&amp;utm_medium=mainmiddle&amp;utm_campaign=220908_premium" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_pc_rrRrRR_GNB.png" alt=""></div><p>2022.9.8(목) ~ 11.2(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220908/attend?utm_source=pc&amp;utm_medium=mainmiddle&amp;utm_campaign=220908_attend" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_attend_VVVVvv_GNB.png" alt=""></div><p>2022.9.8(목) ~ 11.2(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220908/NewAndReturn?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220908_newandreturn" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_0908_newreturn_GNB.png" alt=""></div><p>2022.9.8(목) ~ 11.2(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/Collabo220908/collabo?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220908_collabo" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220908_collabo_gnb.png" alt=""></div><p>2022.9.8(목) ~ 10.26(수)</p></a></li><li><a href="https://events.fifaonline4.nexon.com/220811/PointMilestone ?utm_source=pc&amp;utm_medium=evGnb&amp;utm_campaign=220811_milestone" target="_self"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/0banner_220811_point_gnb_afsw.png" alt=""></div><p>2022.8.11(목) ~ 9.21(수)</p></a></li><li><a href="https://fifaonline4.nexon.com/news/events/view?n4ArticleSN=1747" target="_blank"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220804_app_GNB.png" alt=""></div><p>2022.9.8(목) ~11.2(수)</p></a></li><li><a href="https://fifaonline4.nexon.com/news/notice/view?n4articlesn=3444" target="_blank"><div class="thumb"><img src="https://ssl.nexon.com/s2/game/fo4/obt/banner/evGnb/banner_220630_1vs1update_qwewrfq_GNB.png" alt=""></div><p>2022.6.30(목) ~ 9.22(목) 점검 전</p></a></li>
-                </ul>
-            </div>
-            <div class="scroll_bar on" style="height: 823px;"><div class="handle" style="transform: translateZ(0px) translateY(0px); height: 323px;"><span></span></div></div>
-        </aside>
-        <div id="share">
-            <div class="title">
-                <h4>페이지 공유하기</h4>
-                <button type="button" class="btn_close">닫기</button>
-            </div>
-            <div class="inner">
-                <button type="button" onclick="share.kakao(); return false;" class="btn_kakaotalk">카카오톡</button>
-                <button type="button" onclick="share.facebook(); return false;" class="btn_facebook">페이스북</button>
-            </div>
-        </div>
-        <div id="dimmed"></div>
-        <div id="fixedBar">
-            <ul>
-                <li class=""><a href="/220908/Attend?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220908_attend">출석부</a></li>
-                <li class=""><a href="/220908/Shoot?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220908_shooting">슈팅 머신</a></li>
-                <li class="active"><a href="/220908/PlayerPack?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220908_diy">DIY</a></li>            
-                <li class=""><a href="/220811/PointMilestone?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220811_milestone">마일스톤</a></li>            
-                <li class=""><a href="/220908/pcbang?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220908_premium">PC방</a></li>
-                <li class=""><a href="/220908/NewAndReturn?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220804_nru">신규복귀</a></li>
-                <li class=""><a href="/collabo220908/collabo?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220908_collabo">콜라보</a></li>
-                <li class=""><a href="/220908/saturday?utm_source=pc&amp;utm_medium=evGnbSub&amp;utm_campaign=220917_fo4">토요일 접속</a></li>
-            </ul>
-        </div>    
-    </section>
-
-    <main id="middle" class="middle change" role="main">
-        <input name="__RequestVerificationToken" type="hidden" value="aFLrgaIZQmSp7pDVOcMK_X5iIgizn7MfgSfadMvKd-lCYsNQXImgu_c6YH9DaXKUcoZTeU0AlBcIGmpbYt8CsW0oCvY1">
-        <input type="hidden" id="IsLogin" value="0">
-        <input type="hidden" id="IsDefaultChractor" value="0">
-        <input type="hidden" id="IsEnd" value="0">
-
-        <section class="event _01 section">
-            <div class="inner">
-                    <div class="user login">
-                        <button type="button" onclick="Navi.Login(); return false;" class="btn_login" style="cursor: pointer;">이벤트에 참여하시려면 <strong>[로그인]</strong>해 주세요.</button>
-                    </div>
-
-<div id="combination" class="clearfix">
-
-    <div class="step_01 active">
-        <dl>
-            <dt>
-                1.클래스
-                <div class="tooltip">
-                    <div class="detail">
-                        <p>
-                            <span class="title">1강 기준 선수 OVR</span>
-                            NHD/LIVE/TB : OVR 75 이상<br>
-                            TKL/TC/GR/TT : OVR 80 이상<br>
-                            BOE21/UP/MC/LH/HOT : 제한 없음
-                        </p>
-                    </div>
-                </div>
-            </dt>
-
-            <dd class="disabled">
-                <button type="button" data-class="1" onclick="return false;" class="btn_class_boe21">BOE21</button>
-            </dd><!-- 선택 시 active -->
-            <dd class="disabled">
-                <button type="button" data-class="2" onclick="return false;" class="btn_class_up">UP</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="3" onclick="return false;" class="btn_class_mc">MC</button>
-            </dd>
-            <dd class="active">
-              <button type="button" data-class="4" onclick="return false;" class="btn_class_lh">LH</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="5" onclick="return false;" class="btn_class_tkl">TKL</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="6" onclick="return false;" class="btn_class_hot">HOT</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="7" onclick="return false;" class="btn_class_tc">TC</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="8" onclick="return false;" class="btn_class_tb">TB</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="9" onclick="return false;" class="btn_class_gr">GR</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="10" onclick="return false;" class="btn_class_tt">TT</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="11" onclick="return false;" class="btn_class_nhd">NHD</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-class="12" onclick="return false;" class="btn_class_live">LIVE</button>
-            </dd>
-        </dl>
-    </div>
-    <div class="step_02 active">
-        <dl>
-            <dt>
-                2.선수 인원
-                <div class="tooltip">
-                    <div class="detail">
-                        <p>
-                            <span class="title">선택 조건</span>
-                            BOE21/UP/MC/TC/NHD : 50~150<br>
-                            LH/TKL/HOT/TB/GR/TT/LIVE : 50~200<br>
-                            <br>
-                            <strong>* 각 클래스의 선수 인원별 선택 가능한 강화등급은 <br>제한될 수 있습니다.</strong>
-                        </p>
-                    </div>
-                </div>
-            </dt>
-            <dd class="active">
-                <button type="button" data-player="13" onclick="return false;" class="btn_player_50">Top Price 50</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-player="14" onclick="return false;" class="btn_player_100">Top Price 100</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-player="15" onclick="return false;" class="btn_player_150">Top Price 150</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-player="16" onclick="return false;" class="btn_player_200">Top Price 200</button>
-            </dd>
-        </dl>
-    </div>
-    <div class="step_03 active">
-        <dl>
-            <dt>
-                3.강화 등급
-                <div class="tooltip">
-                    <div class="detail">
-                        <p>
-                            <span class="title">선택 조건</span>
-                            BOE21 : 3~5강<br>
-                            UP/LH : 4~7강<br>
-                            MC : 3~6강<br>
-                            TKL/HOT/LIVE : 5~8강<br>
-                            TC/GR : 6~8강<br>
-                            TB/NHD : 7~9강<br>
-                            TT : 6~9강<br>
-                            <br>
-                            <strong>* 각 클래스의 강화 등급별 선택 가능한 선수인원은<br>제한될 수 있습니다.</strong>
-                        </p>
-                    </div>
-                </div>
-            </dt>
-            
-            <dd class="disabled">
-                <button type="button" data-grade="23" onclick="return false;" class="btn_upgrade_3">3강</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-grade="24" onclick="return false;" class="btn_upgrade_4">4강</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-grade="25" onclick="return false;" class="btn_upgrade_5">5강</button>
-            </dd>
-            <dd class="">
-                <button type="button" data-grade="26" onclick="return false;" class="btn_upgrade_6">6강</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-grade="27" onclick="return false;" class="btn_upgrade_7">7강</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-grade="28" onclick="return false;" class="btn_upgrade_8">8강</button>
-            </dd>
-            <dd class="disabled">
-                <button type="button" data-grade="29" onclick="return false;" class="btn_upgrade_9">9강</button>
-            </dd>
-        </dl>
-    </div>
-
-    <button type="button" onclick="PlayerPack.Packing(this); return false;" class="btn_card_put" style="transform: matrix(1, 0, 0, 1, 0, 0);"><p class="hidden">조합하기</p></button>
-    <button type="button" onclick="PlayerPack.PackingReset(this); return false;" class="btn_card_reset"><p class="hidden">다시하기</p></button>
-
-    <div class="step_04 active">
-        <p class="point" id="ChangePoint" data-packid="">-</p>
-        <div class="card">
-            <div class="class _4" style=""></div>
-            <div class="pack _13" style=""></div>
-            <div class="upgrade _25" style=""></div>
-
-            <div class="loader">
-                <div class="wrapper">
-                    <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
-                </div>
-            </div>
-        </div>
-                <button type="button" onclick="PlayerPack.ChangePack(this); return false;" class="btn_exchange" id="btnExchage" data-isexchange="0">선수팩 교환 (0/2)</button>
-    </div>
-</div>
-            </div>
-        </section>        
-        <!-- //이벤트 -->
-    </main>
-
-
-    <!-- 참여 안내 레이어 -->
-    <div class="howto event_layer_popup" style="display: none;;">
-        <div class="content">
-            <h4 class="title">3판&amp;3미션 플레이 원포인트 레슨</h4>
-            <button type="button" onclick="eventLayerPopupClose('howto'); return false;" class="btn_close"><p class="hidden">닫기</p></button>
-            <div class="howto">
-                <div class="playt1">현재까지 누적 포인트 <span class="t1">0P</span> 이고<br>내일부터 <span class="t2">42일간</span> 매일 완료 &amp; 조회 시</div>
-                <div class="p_fieldset">
-                    <input id="playCount" type="text" onkeypress="validate(event)" onblur="onblur_event(event,this)" value="0">
-                    <div class="selector">
-                        <div>
-                            <input type="checkbox" id="checkbox1" name="checkbox" value="1">
-                            <label for="checkbox1"><span></span> 쉬움</label>
+                                <dd class="disabled">
+                                    <button type="button" data-class="1" onclick="return false;" class="btn_class_boe21">BOE21</button>
+                                </dd><!-- 선택 시 active -->
+                                <dd class="disabled">
+                                    <button type="button" data-class="2" onclick="return false;" class="btn_class_up">UP</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="3" onclick="return false;" class="btn_class_mc">MC</button>
+                                </dd>
+                                <dd class="active">
+                                <button type="button" data-class="4" onclick="return false;" class="btn_class_lh">LH</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="5" onclick="return false;" class="btn_class_tkl">TKL</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="6" onclick="return false;" class="btn_class_hot">HOT</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="7" onclick="return false;" class="btn_class_tc">TC</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="8" onclick="return false;" class="btn_class_tb">TB</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="9" onclick="return false;" class="btn_class_gr">GR</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="10" onclick="return false;" class="btn_class_tt">TT</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="11" onclick="return false;" class="btn_class_nhd">NHD</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-class="12" onclick="return false;" class="btn_class_live">LIVE</button>
+                                </dd>
+                            </dl>
                         </div>
-                        <div>
-                            <input type="checkbox" id="checkbox2" name="checkbox" value="1">
-                            <label for="checkbox2"><span></span> 보통</label>
+                        <div class="step_02 active">
+                            <dl>
+                                <dt>
+                                    2.선수 인원
+                                    <div class="tooltip">
+                                        <div class="detail">
+                                            <p>
+                                                <span class="title">선택 조건</span>
+                                                BOE21/UP/MC/TC/NHD : 50~150<br>
+                                                LH/TKL/HOT/TB/GR/TT/LIVE : 50~200<br>
+                                                <br>
+                                                <strong>* 각 클래스의 선수 인원별 선택 가능한 강화등급은 <br>제한될 수 있습니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </dt>
+                                <dd class="active">
+                                    <button type="button" data-player="13" onclick="return false;" class="btn_player_50">Top Price 50</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-player="14" onclick="return false;" class="btn_player_100">Top Price 100</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-player="15" onclick="return false;" class="btn_player_150">Top Price 150</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-player="16" onclick="return false;" class="btn_player_200">Top Price 200</button>
+                                </dd>
+                            </dl>
                         </div>
-                        <div>
-                            <input type="checkbox" id="checkbox3" name="checkbox" value="2">
-                            <label for="checkbox3"><span></span> 어려움</label>
+                        <div class="step_03 active">
+                            <dl>
+                                <dt>
+                                    3.강화 등급
+                                    <div class="tooltip">
+                                        <div class="detail">
+                                            <p>
+                                                <span class="title">선택 조건</span>
+                                                BOE21 : 3~5강<br>
+                                                UP/LH : 4~7강<br>
+                                                MC : 3~6강<br>
+                                                TKL/HOT/LIVE : 5~8강<br>
+                                                TC/GR : 6~8강<br>
+                                                TB/NHD : 7~9강<br>
+                                                TT : 6~9강<br>
+                                                <br>
+                                                <strong>* 각 클래스의 강화 등급별 선택 가능한 선수인원은<br>제한될 수 있습니다.</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </dt>
+                                
+                                <dd class="disabled">
+                                    <button type="button" data-grade="23" onclick="return false;" class="btn_upgrade_3">3강</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-grade="24" onclick="return false;" class="btn_upgrade_4">4강</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-grade="25" onclick="return false;" class="btn_upgrade_5">5강</button>
+                                </dd>
+                                <dd class="">
+                                    <button type="button" data-grade="26" onclick="return false;" class="btn_upgrade_6">6강</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-grade="27" onclick="return false;" class="btn_upgrade_7">7강</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-grade="28" onclick="return false;" class="btn_upgrade_8">8강</button>
+                                </dd>
+                                <dd class="disabled">
+                                    <button type="button" data-grade="29" onclick="return false;" class="btn_upgrade_9">9강</button>
+                                </dd>
+                            </dl>
+                        </div>
+
+                        <button type="button" onclick="PlayerPack.Packing(this); return false;" class="btn_card_put" style="transform: matrix(1, 0, 0, 1, 0, 0);"><p class="hidden">조합하기</p></button>
+                        <button type="button" onclick="PlayerPack.PackingReset(this); return false;" class="btn_card_reset"><p class="hidden">다시하기</p></button>
+
+                        <div class="step_04 active">
+                            <p class="point" id="ChangePoint" data-packid="">-</p>
+                            <div class="card">
+                                <div class="class _4" style=""></div>
+                                <div class="pack _13" style=""></div>
+                                <div class="upgrade _25" style=""></div>
+
+                                <div class="loader">
+                                    <div class="wrapper">
+                                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                                    <button type="button" onclick="PlayerPack.ChangePack(this); return false;" class="btn_exchange" id="btnExchage" data-isexchange="0">선수팩 교환 (0/2)</button>
                         </div>
                     </div>
+                    <!-- 이벤트 : e -->
                 </div>
-                <div class="playt2">
-                    <span class="t1">0P</span> 를 추가 획득하여<br>
-                    총 <span class="t2">0P</span> 가 됩니다.
-                </div>
-
-                <script>
-
-                    var currentPoint = parseInt($(".playt1 .t1").text());
-                    var countDay = parseInt($(".playt1 .t2").text());
-                    var playCount = parseInt($("#playCount").val());
-                    if (playCount === 0) { playCount = 0 }
-                    else if (playCount === 1) { playCount = 1 }
-                    else if (playCount === 2) { playCount = 2 }
-                    else if (playCount === 3) { playCount = 4 }
-                    var playMission = parseInt($("#playCount").val());
-                    var calcP = parseInt($(".playt2 .t1").text());
-                    var totalP = parseInt($(".playt2 .t2").text());
-
-                    var playMissionArr = [];
-                    var sum = 0;
-
-                    function playSumfunc() {
-                        playCount = parseInt($("#playCount").val());
-                        if (playCount === 0) { playCount = 0 }
-                        else if (playCount === 1) { playCount = 1 }
-                        else if (playCount === 2) { playCount = 2 }
-                        else if (playCount === 3) { playCount = 4 }
-                    }
-
-                    function missionSumfunc() {
-                        sum = 0;
-                        playMissionArr = [];
-                        $("input[name=checkbox]:checkbox:checked").each(function () {
-                            playMissionArr.push(this.value)
-                        });
-                        $.each(playMissionArr, function () { sum += parseFloat(this) || 0; });
-                    }
-                    function calcPointfunc() {
-                        $(".playt2 .t1").text(((playCount * countDay) + (sum * countDay)) + "P");
-                    }
-
-                    function totalPointfunc() {
-                        playSumfunc();
-                        missionSumfunc();
-                        calcPointfunc();
-                        $(".playt2 .t2").text((((playCount * countDay) + (sum * countDay)) + currentPoint) + "P");
-                    }
-
-                    function validate(evt) {
-                        console.log(evt);
-                        var theEvent = evt || window.event;
-                        evt.target.value = evt.target.value.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, "");
-
-                        if (theEvent.type === 'paste') {
-                            key = event.clipboardData.getData('text/plain');
-                        } else {
-                            var key = theEvent.keyCode || theEvent.which;
-                            console.log(key);
-                            key = String.fromCharCode(key);
-                        }
-                        var regex = /[0-9]|\./;
-                        if (!regex.test(key)) {
-                            theEvent.returnValue = false;
-                            if (theEvent.preventDefault) theEvent.preventDefault();
-                        }
-                    }
-                    function onblur_event(evt, input) {
-                        var theEvent = evt || window.event;
-                        evt.target.value = evt.target.value.replace(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, "");
-                        if (input.value > 3) input.value = 3;
-                    }
-
-                    $(".howto input").change(function (e) {
-                        onblur_event(e, this)
-                        totalPointfunc()
-                    });
-                    totalPointfunc();
-                </script>
-            </div>
-        </div>
+            </section>
+        </main>
     </div>
-    <!-- //참여 안내 레이어 -->
-
-
-    <div class="point event_layer_popup">
-        <div class="content">
-            <h4 class="title">선수팩 DIY</h4>
-            <button type="button" onclick="eventLayerPopupClose('point'); return false;" class="btn_close"><p class="hidden">닫기</p></button>
-            <div class="message">
-                <p></p>
-            </div>
-            <div class="button">
-                <button type="button" onclick="eventLayerPopupClose('point'); $('html,body').stop(!0, !0).animate({ scrollTop : $('#middle .event._02.section').offset().top-50 }, 400, 'easeOutExpo'); return false;" class="btn_confirm">확인</button>
-            </div>
-        </div>
-    </div>
-
-</div>
 
     <script src="/Content/common/js/layer.js?t=2022-09-21 17:55"></script>
-    
     <script type="text/javascript"> //https://events.fifaonline4.nexon.com/Content/220908/diy/playerpack.js?t=202209211755
       var selectClass = 0, selectPlayer = 0, selectGrade = 0;
       $(function () {
@@ -3108,11 +2717,5 @@
       }
 
     </script>
-    <script>
-        $(function () {
-        });
-    </script>
-
-
 </body>
 </html>
