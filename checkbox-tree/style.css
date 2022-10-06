@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0; box-sizing: border-box; line-height:1; vertical-align: middle;}
+html, body {width:100%; font-size:13px;}
+ol, ul {list-style: none;}
+span, i {display: inline-block;}
+button {-webkit-appearance: none; -moz-appearance: none; appearance: none; border:none; background:none; cursor:pointer;}
+
+.content {
+    width:100%; 
+    max-width:300px; 
+    margin:30px auto 0; 
+    border:5px solid #e9e9e9; 
+    border-radius:15px; 
+    padding:15px 25px 15px 15px;
+}
+label {display:inline-block; padding-bottom:5px;}
+.leaf li:first-child label {padding-top:5px;} 
+.tree label {padding-bottom:8px;}
+.tree button[title="toggle"] span::before {
+    font-family: "Font Awesome 5 Free";
+    content:'\f107';
+    font-weight: 900;
+    display: inline-block;
+    transform: translateY(-2px);
+}
+.collapse .tree button[title="toggle"] span::before {
+    transform: rotate(-90deg) translateX(3px);
+    color:#999;
+}
+.tree-item.collapse .leaf {display: none;}
+.tree-item .leaf {
+    width:calc(100% - 16px);
+    margin-left:16px;
+    border-top: 1px dashed #bbb;
+}

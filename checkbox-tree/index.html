@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox tree</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="content">
+        <div class="tree-item collapse">
+            <div class="tree">
+                <button type="button" title="toggle" aria-label="toggle">
+                    <span></span>
+                </button>
+                <label for="check01">
+                    <input type="checkbox" id="check01" name="item01" class="top_check_all">
+                    <span>Documents</span>
+                </label>
+            </div>
+            <ul class="leaf">
+                <li>
+                    <label for="sub01">
+                        <input type="checkbox" id="sub01" name="item01">
+                        <span>Employee Evaluations.zip</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="sub02">
+                        <input type="checkbox" id="sub02" name="item01">
+                        <span>Expense Report.pdf</span>
+                    </label>
+                </li>
+                <li>
+                    <div class="tree-item collapse">
+                        <div class="tree">
+                            <button type="button" title="toggle" aria-label="toggle">
+                                <span></span>
+                            </button>
+                            <label for="check02">
+                                <input type="checkbox" id="check02" name="item01" class="check_all">
+                                <span>Documents</span>
+                            </label>
+                        </div>
+                        <ul class="leaf">
+                            <li>
+                                <label for="sub04">
+                                    <input type="checkbox" id="sub04" name="item01">
+                                    <span>Employee Evaluations.zip</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="sub05">
+                                    <input type="checkbox" id="sub05" name="item01">
+                                    <span>Expense Report.pdf</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="sub06">
+                                    <input type="checkbox" id="sub06" name="item01">
+                                    <span>Expense Report.pdf</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="content checkalltest">
+        <div class="tree-item">
+            <div class="tree">
+                <button type="button" title="toggle" aria-label="toggle">
+                    <span></span>
+                </button>
+                <label>
+                    <input type="checkbox" name="checkAll" id="checkAll" class="test">
+                    <span>check all</span>
+                </label>
+            </div>
+            <ul class="leaf">
+                <li>
+                    <label>
+                        <input type="checkbox" name="check" class="test">
+                        <span>check 01</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="check" class="test">
+                        <span>check 02</span>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" name="check" class="test">
+                        <span>check 03</span>
+                    </label>
+
+                    <!-- <button type="button" title="toggle" aria-label="toggle">
+                        <span></span>
+                    </button>
+                    <label>
+                        <input type="checkbox" name="checkAll" id="subCheckAll" class="test">
+                        <span>check all</span>
+                    </label> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+        
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+        
+    </script>
+</body>
+</html>
