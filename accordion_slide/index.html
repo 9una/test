@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion slider</title>
+    
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box;}
+        section {width:100%; height:100vh; display: flex; align-items: center; justify-content: center;}
+
+        #hero {
+            width: 100%;
+            height:50vh;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+        #hero:before {
+            display: block;
+            content: "";
+            padding-top: 50%;
+        }
+        .hero {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            flex-direction:column;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .hero .slide-item {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 80px;
+            position: relative;
+            -ms-flex-preferred-size: 80px;
+            flex-basis: 80px;
+            -webkit-transition: 0.8s linear;
+            -o-transition: 0.8s linear;
+            transition: 0.8s linear;
+            overflow:hidden;
+        }
+        .slide-item:nth-child(1) {background:orange;}
+        .slide-item:nth-child(2) {background:skyblue;}
+        .slide-item:nth-child(3) {background:#999;}
+        .slide-item:nth-child(4) {background:yellowgreen;}
+
+        .hero .slide-item:not(.on):hover {
+        cursor: pointer;
+        }
+        .hero .slide-item.on {
+            -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+            -webkit-transition: 0.8s linear;
+            -o-transition: 0.8s linear;
+            transition: 0.8s linear;
+            z-index: 20;
+        }
+        .title {height:50px; background:#fff; border:1px solid black;}
+        .content {height:100px; padding:30px;}
+    </style>
+</head>
+
+<body>
+    <div id="hero">
+        <div class="hero">
+            <div class="slide-item on">
+                <div class="title">title</div>
+                <div class="content">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                </div>
+            </div>
+            <div class="slide-item">
+                <div class="title">title</div>
+                <div class="content">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                </div>
+            </div>
+            <div class="slide-item">
+                <div class="title">title</div>
+                <div class="content">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                </div>
+            </div>
+        </div>
+    </div>
+    <section style="background:#000; color:#fff;">
+        <h1>section 01</h1>
+    </section>
+    <section style="background:cornflowerblue; color:#000;">
+        <h1>section 02</h1>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $item = 0,
+                $itemNo = $('.slide-item').length;
+            
+            function slide(){
+                $item++;
+                if($item > $itemNo - 1) {
+                    $item = 0;
+                }
+                $('.slide-item').removeClass('on');
+                $('.slide-item').eq($item).addClass('on');
+            }
+            var $autoTransition = setInterval(slide, 5000);
+
+            $('.slide-item').click(function(){
+                clearInterval($autoTransition);
+                $item = $(this).index();
+                $('.slide-item').removeClass('on');
+                $('.slide-item').eq($item).addClass('on');
+                $autoTransition = setInterval(slide, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
