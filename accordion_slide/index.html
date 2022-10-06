@@ -7,12 +7,12 @@
     <title>accordion slider</title>
     
     <style>
-        * {margin:0; padding:0; box-sizing: border-box;}
+        * {margin:0; padding:0; box-sizing: border-box; font-style: normal;}
         section {width:100%; height:100vh; display: flex; align-items: center; justify-content: center;}
 
         #hero {
             width: 100%;
-            height:50vh;
+            height:280px;
             display: block;
             overflow: hidden;
             position: relative;
@@ -67,7 +67,14 @@
             z-index: 20;
         }
         .title {height:50px; background:#fff; border:1px solid black;}
-        .content {height:100px; padding:30px;}
+        .content {height:90px; padding:20px; display: flex; box-sizing: content-box;}
+        .photo {width:90px; height:90px; margin-right:20px; border:1px solid black; border-radius:10px;}
+        .cont {width:calc(100% - 110px); position:relative; display: flex; flex-direction: column; justify-content: space-between;}
+        .text {width:calc(100% - 50px);}
+        .like-comment {position:absolute; right:0; top:50%; transform: translateY(-50%); border:1px solid black; border-radius:10px; padding:5px;}
+        .like-comment span {display: block; text-align: center;}
+        .like::before {content:'♡';}
+        .comment::before {content:'♨';}
     </style>
 </head>
 
@@ -77,19 +84,64 @@
             <div class="slide-item on">
                 <div class="title">title</div>
                 <div class="content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                    <div class="photo">photo</div>
+                    <div class="cont">
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                        </div>
+                        <div class="user">
+                            <i></i>
+                            <span>text0123</span>
+                            <span>2022-10-10</span>
+                            <span>조회 50</span>
+                        </div>
+                        <div class="like-comment">
+                            <span><i class="like"></i><br>110</span>
+                            <span><i class="comment"></i><br>25</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="slide-item">
                 <div class="title">title</div>
                 <div class="content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                    <div class="photo">photo</div>
+                    <div class="cont">
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                        </div>
+                        <div class="user">
+                            <i></i>
+                            <span>text0123</span>
+                            <span>2022-10-10</span>
+                            <span>조회 50</span>
+                        </div>
+                        <div class="like-comment">
+                            <span><i class="like"></i><br>110</span>
+                            <span><i class="comment"></i><br>25</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="slide-item">
                 <div class="title">title</div>
                 <div class="content">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? Vel, natus in, ipsum, veniam amet suscipit iure eius accusamus odio asperiores explicabo. Soluta modi numquam reprehenderit ea nulla blanditiis sunt perferendis amet quas odio beatae laboriosam eius recusandae est aut voluptatum earum quo voluptate, fugiat ut eligendi vero! Quos officiis magni maxime sunt sint nisi sed delectus et voluptatum reprehenderit consectetur suscipit amet ullam dignissimos, vitae perspiciatis error quas expedita numquam tempore ut est, magnam a. Veritatis magnam perferendis vero maxime hic harum?
+                    <div class="photo">photo</div>
+                    <div class="cont">
+                        <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                        </div>
+                        <div class="user">
+                            <i></i>
+                            <span>text0123</span>
+                            <span>2022-10-10</span>
+                            <span>조회 50</span>
+                        </div>
+                        <div class="like-comment">
+                            <span><i class="like"></i><br>110</span>
+                            <span><i class="comment"></i><br>25</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
