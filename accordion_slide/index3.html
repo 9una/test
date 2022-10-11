@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion slider</title>
+    
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box; font-style: normal;}
+        section {width:100%; height:100vh; display: flex; align-items: center; justify-content: center;}
+
+        #wrap {max-width:720px; margin:0 auto;}
+        #hero {
+             width: 100%; 
+             /* height:370px;  */
+             display: block; 
+             overflow: hidden; 
+             position: relative;
+        }
+        .hero {
+             display: -webkit-box; 
+             display: -ms-flexbox; 
+             display: flex; 
+             width: 100%; 
+             overflow: hidden; 
+             flex-direction:column; 
+             margin: 0; 
+             padding: 0; 
+             position: absolute; 
+             top: 0; 
+             bottom: 0; 
+             left: 0; 
+             right: 0;
+        }
+        .hero .slide-item {
+            margin: 0; 
+            padding: 0; 
+            width: 100%;
+            /* height:190px; */
+            position:absolute;
+            overflow:hidden;
+            visibility: visible;
+            -webkit-transition: 0.3s linear; 
+            -o-transition: 0.3s linear; 
+            transition: 0.3s linear;
+        }
+        /*초기세팅*/
+        .hero .slide-item:nth-child(1){margin-top:0;}
+        .hero .slide-item:nth-child(2){margin-top:190px;}
+        .hero .slide-item:nth-child(3){margin-top:280px;}
+        .hero .slide-item:nth-child(4){margin-top:370px;}
+        .hero .slide-item:nth-child(5){margin-top:460px;}
+        
+        /* .hero .slide-item:nth-child(2).on {margin-top:90px;}
+        .hero .slide-item:nth-child(3).on {margin-top:180px;} */
+        
+        .title {height:60px; margin-bottom:30px; background:#fff; border:1px solid black;}
+        .content {height:100px; padding:0 20px; display: flex; box-sizing: content-box;}
+        .text {width:calc(100% - 50px);}
+        
+    </style>
+</head>
+
+<body>
+    <!-- https://codesandbox.io/s/vigilant-sammet-r8yq31?file=/index.html 1007 머리 더이상 안돌아감 ㅎㅋ -->
+    <div id="wrap">
+        <section style="background:skyblue; color:#fff; height:400px;">
+            <h1>section 00</h1>
+        </section>
+        <div id="hero">
+            <ul class="hero">
+                <li class="slide-item on">
+                    <div class="inner" style="background:yellowgreen;">
+                        <div class="title">title</div>
+                        <div class="content">
+                            <div class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide-item">
+                    <div class="inner" style="background:coral;">
+                        <div class="title">title</div>
+                        <div class="content">
+                            <div class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide-item">
+                    <div class="inner" style="background:sienna;">
+                        <div class="title">title</div>
+                        <div class="content">
+                            <div class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!-- test 2개 더 추가하고 css는 jquery로 -->
+                <li class="slide-item">
+                    <div class="inner" style="background:sienna;">
+                        <div class="title">title</div>
+                        <div class="content">
+                            <div class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="slide-item">
+                    <div class="inner" style="background:sienna;">
+                        <div class="title">title</div>
+                        <div class="content">
+                            <div class="text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti tempora aperiam magni. Consequuntur sunt id sapiente consectetur possimus similique distinctio, nulla dolores facere labore deserunt quas? 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section style="background:#000; color:#fff;">
+            <h1>section 01</h1>
+        </section>
+        <section style="background:cornflowerblue; color:#000;">
+            <h1>section 02</h1>
+        </section>
+    </div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        /* box height add */
+        const slideItem = document.querySelectorAll('.slide-item');
+        const height = 190 + (slideItem.length - 1) * 90;
+        const hero = document.querySelector('#hero');
+        hero.style.height = height + 'px';
+
+        $(document).ready(function() {
+            
+
+            var $item = 0,
+                $itemNo = $('.slide-item').length;
+            
+            function slide(){
+                $item++;
+                if($item > $itemNo - 1) {
+                    $item = 0;
+                    $('.slide-item').removeClass('on');
+                }
+                $('.slide-item').eq($item).addClass('on');
+            }
+            var $autoTransition = setInterval(slide, 2500);
+
+
+            function changeMargin(){
+
+                let marginTop;
+                for(i = 0; i < $('.slide-item').length; i++){
+                    marginTop = 190 + (i - 1) * 90;
+                    if(i == 0) {marginTop = 0;}
+
+                    if($('.slide-item').eq(i).hasClass('on')){
+                        marginTop -= 100;
+                        if(i == 0) {marginTop = 0;}
+                    }
+                    $('.slide-item').eq(i).css('margin-top', marginTop);
+                }
+            }
+            setInterval(changeMargin, 2500);
+
+
+            $('.slide-item').click(function(){
+                clearInterval($autoTransition);
+                $item = $(this).index();
+                $('.slide-item').removeClass('on');
+                $(this).prevAll().addClass('on');
+                $('.slide-item').eq($item).addClass('on');
+                $autoTransition = setInterval(slide, 2500);
+                changeMargin();
+            });
+        });
+    </script>
+</body>
+</html>
