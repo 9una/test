@@ -1,6 +1,6 @@
 // (반응형) : 윈도우 사이즈에 따른 말줄임 글자수 변경
 
-$('div p').each(function(){
+$('li p').each(function(){
     var length;
     const text = $(this).text(); //기존 텍스트 저장
     
@@ -22,7 +22,7 @@ $('div p').each(function(){
     $(window).resize(function(){
         lengthChange();
 
-        $('div p').each(function(){
+        $('li p').each(function(){
             $(this).text(text);
 
             $(this).each(function () {
@@ -32,5 +32,6 @@ $('div p').each(function(){
             });
         
         })
+        $('h3').text('text 값 : ' + text);
     })
 })
