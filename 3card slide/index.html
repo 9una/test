@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <style>
+        .wrap {
+            width:100%;
+            max-width: 1200px;
+            margin:0 auto;
+        }
+        .swiper {
+            width: 100%;
+            height: 300px;
+        }
+        .swiper .swiper-slide {
+            width: 500px;
+            height: 100%;
+
+            font-size: 32px;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .swiper .swiper-slide-1 {
+            background-color: #425066;
+        }
+        .swiper .swiper-slide-2 {
+            background-color: #8d4bbb;
+        }
+        .swiper .swiper-slide-3 {
+            background-color: #9d2933;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-slide-1">1</div>
+                <div class="swiper-slide swiper-slide-2">2</div>
+                <div class="swiper-slide swiper-slide-3">3</div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+
+        const swiper = new Swiper('.swiper', {
+            effect: 'coverflow',
+            loop: true,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                // stretch: 0,
+                // depth: 500,
+                // modifier: 1,
+                slideShadows: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-prev',
+                prevEl: '.swiper-button-next',
+            },
+        });
+
+        swiper.on('slideChange', (e) => {
+            console.log(e.realIndex);
+        });
+    </script>
+</body>
+</html>
