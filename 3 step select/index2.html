@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>3단 select 똑똑이</h1>
+    <p>
+        <select id="s1" onchange="select1Change();">
+          <option>제조사</option>
+          <option value="기아">기아</option>
+          <option value="르노삼성">르노삼성</option>
+          <option value="제네시스">제네시스</option>
+          <option value="현대">현대</option>
+          <option value="수입차">수입차</option>
+        </select>
+        <select id="s2" onchange="select2Change()">
+            <option>형태</option>
+        </select>
+        <select id="s3">
+            <option>모델명</option>
+        </select>
+    </p>
+    <p class="result"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    var a = ['승용차','RV','전기차'];
+    var b = ['승용차','SUV'];
+    var c = ['승용차','SUV'];
+    var d = ['승용차','SUV','수소/전기차', '기타'];
+    var e = ['독일'];
+
+    var aa = ['모닝','레이','K3','K5','K5하이브리드','스팅어','K8','K8하이브리드','더K9'];
+    var ab = ['니로','니로플러인하이브리드','셀토스','스포티지','스포티지하이브리드','쏘렌토','쏘렌토하이브리드','모하비','카니발','카니발하이리무진'];
+    var ac = ['니로EV','EV6'];
+    
+    var ba = ['SM6'];
+    var bb = ['QM6','XM3','조에'];
+
+    var ca = ['G70','G80','G80일렉트로닉','G90'];
+    var cb = ['GV70','GV80','GV60'];
+
+    var da = ['아반떼','아반떼하이브리드','쏘나타','쏘나타하이브리드','그랜저','그랜저하이브리드'];
+    var db = ['캐스퍼','베뉴','코나','코나하이브리드','투싼','투싼하이브리드','산타페','산타페하이브리드','펠리세이드'];
+    var dc = ['넥쏘','아이오닉5','코나일렉트로닉0'];
+    var df = ['스타리아'];
+    
+    var ea = ['BMW','벤츠','아우디'];
+    
+    function select1Change() {
+        var o;
+        var v = $( '#s1' ).val();
+
+        ( v == '기아' ) ? o = a :
+        ( v == '르노삼성' ) ? o = b :
+        ( v == '제네시스' ) ? o = c :
+        ( v == '현대' ) ? o = d :
+        ( v == '수입차' ) ? o = e :
+            o = []; //else
+
+        /*초기화*/
+        $( '#s2' ).empty();
+        $( '#s2' ).append( '<option>형태</option>' );
+        
+        for (let i = 0; i < o.length; i++ ) {
+          $( '#s2' ).append( '<option value="' + o[i] +'">' + o[ i ] + '</option>' );
+        }
+    };
+    
+    function select2Change() {
+        var o;
+        var v1 = $( '#s1' ).val();
+        var v2 = $( '#s2' ).val();
+        
+        if( v2 == '승용차'){
+            if(v1 == '기아'){o = aa;}
+            else if(v1 == '르노삼성'){o = ba;}
+            else if(v1 == '제네시스'){o = ca;}
+            else if(v1 == '현대'){o = da;}
+        }
+        if( v2 == 'SUV'){
+            if( v1 == '르노삼성'){o = bb;}
+            else if( v1 == '제네시스'){o = cb;}
+            else {o = db;}
+        }
+        if(v2 == 'RV' ){o = ab;}
+        if(v2 == '전기차' ){o = ac;}
+        if(v2 == '수소/전기차' ){o = dc;}
+        if(v2 == '기타' ){o = de;}
+        if(v2 == '독일' ){o = ea;}
+            //o = []; //else
+
+        
+        $( '#s3' ).empty();
+        $( '#s3' ).append( '<option>모델명</option>' );
+
+        for (let i = 0; i < o.length; i++ ) {
+          $( '#s3' ).append( '<option value="' + o[i] +'">' + o[ i ] + '</option>' );
+        }
+        
+        
+    }
+    $('#s3').on('change', function(){
+        $('.result').text($('#s1').val() + ', ' + $('#s2').val() + ', ' + $('#s3').val());
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <div>
+        <h1>3단 select 노가다형 꾸엑</h1>
+      <input type="hidden" name="wr_1" val="" />
+      <table>
+        <tr>
+          <th rowspan="4" scope="row" style="padding-top: 10px;"></th>
+          <td>
+            <select data-id="a" name="sel1" style="width: 100%;">
+              <option value="">제조사</option>
+              <option value="기아">기아</option>
+              <option value="르노삼성">르노삼성</option>
+              <option value="제네시스">제네시스</option>
+              <option value="현대">현대</option>
+              <option value="수입차">수입차</option>
+            </select>
+            <select data-id="b" name="sel2" style="width: 100%;">
+              <option value="">형태</option>
+            </select>
+            <select data-id="c" name="sel3" style="width: 100%;">
+              <option value="">모델명</option>
+            </select>
+          </td>
+
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("select[data-id=a]").change(function () {
+          var temp = $("select[data-id=b]");
+          var a = $(this).val();
+          temp.children().remove();
+          temp.append('<option value="">형태</option>');
+
+          if (a == "기아") {
+            temp.append('<option value="승용차">승용차</option>');
+            temp.append('<option value="RV">RV</option>');
+            temp.append('<option value="전기차">전기차</option>');
+          }
+          if (a == "르노삼성") {
+            temp.append('<option value="승용차">승용차</option>');
+            temp.append('<option value="SUV">SUV</option>');
+          }
+          if (a == "제네시스") {
+            temp.append('<option value="승용차">승용차</option>');
+            temp.append('<option value="SUV">SUV</option>');
+          }
+          if (a == "현대") {
+            temp.append('<option value="승용차">승용차</option>');
+            temp.append('<option value="SUV">SUV</option>');
+            temp.append('<option value="수소/전기차">수소/전기차</option>');
+            temp.append('<option value="기타">기타</option>');
+          }
+          if (a == "수입차") {
+            temp.append('<option value="독일">독일</option>');
+          }
+
+            /*** 첫 셀렉트 옵션값 변경시 마지막 셀렉트 리셋 ***/
+            var temp = $("select[data-id=c]");
+            var b = $(this).val();
+            temp.children().remove();
+            temp.append('<option value="">모델명</option>');
+
+
+          $("select[data-id=b]").change(function () {
+            var temp = $("select[data-id=c]");
+            var b = $(this).val();
+            temp.children().remove();
+            temp.append('<option value="">모델명</option>');
+            /* 기아 */
+            if (a == "기아" && b == "승용차") {
+                temp.append('<option value="모닝">모닝</option>');
+                temp.append('<option value="레이">레이</option>');
+                temp.append('<option value="K3">K3</option>');
+                temp.append('<option value="K5">K5</option>');
+                temp.append('<option value="K5하이브리드">K5하이브리드</option>');
+                temp.append('<option value="스팅어">스팅어</option>');
+                temp.append('<option value="K8">K8</option>');
+                temp.append('<option value="K8하이브리드">K8하이브리드</option>');
+                temp.append('<option value="더K9">더K9</option>');
+            }
+            if (a == "기아" && b == "RV") {
+                temp.append('<option value="니로">니로</option>');
+                temp.append(
+                '<option value="니로플러인하이브리드">니로플러인하이브리드</option>'
+                );
+                temp.append('<option value="셀토스">셀토스</option>');
+                temp.append('<option value="스포티지">스포티지</option>');
+                temp.append(
+                '<option value="스포티지하이브리드">스포티지하이브리드</option>'
+                );
+                temp.append('<option value="쏘렌토">쏘렌토</option>');
+                temp.append(
+                '<option value="쏘렌토하이브리드">쏘렌토하이브리드</option>'
+                );
+                temp.append('<option value="모하비">모하비</option>');
+                temp.append('<option value="카니발">카니발</option>');
+                temp.append(
+                '<option value="카니발하이리무진">카니발하이리무진</option>'
+                );
+            }
+            if (a == "기아" && b == "전기차") {
+                temp.append('<option value="니로EV">니로EV</option>');
+                temp.append('<option value="EV6">EV6</option>');
+            }
+
+            /* 르노삼성 */
+            if (a == "르노삼성" && b == "승용차") {
+                temp.append('<option value="SM6">SM6</option>');
+            }
+            if (a == "르노삼성" && b == "SUV") {
+                temp.append('<option value="QM6">QM6</option>');
+                temp.append('<option value="XM3">XM3</option>');
+                temp.append('<option value="조에">조에</option>');
+            }
+
+            /* 제네시스 */
+            if (a == "제네시스" && b == "승용차") {
+                temp.append('<option value="G70">G70</option>');
+                temp.append('<option value="G80">G80</option>');
+                temp.append('<option value="G90일렉트로닉">G90일렉트로닉</option>');
+                temp.append('<option value="G90">G90</option>');
+            }
+            if (a == "제네시스" && b == "SUV") {
+                temp.append('<option value="GV70">GV70</option>');
+                temp.append('<option value="GV80">GV80</option>');
+                temp.append('<option value="GV60">GV60</option>');
+            }
+
+            /* 현대 */
+            if (a == "현대" && b == "승용차") {
+                temp.append('<option value="아반떼">아반떼</option>');
+                temp.append(
+                '<option value="아반떼하이브리드">아반떼하이브리드</option>'
+                );
+                temp.append('<option value="쏘나타">쏘나타</option>');
+                temp.append(
+                '<option value="쏘나타하이브리드">쏘나타하이브리드</option>'
+                );
+                temp.append('<option value="그랜저">그랜저</option>');
+                temp.append(
+                '<option value="그랜저하이브리드">그랜저하이브리드</option>'
+                );
+            }
+            if (a == "현대" && b == "SUV") {
+                temp.append('<option value="캐스퍼">캐스퍼</option>');
+                temp.append('<option value="베뉴">베뉴</option>');
+                temp.append('<option value="코나">코나</option>');
+                temp.append(
+                '<option value="코나하이브리드">코나하이브리드</option>'
+                );
+                temp.append('<option value="투싼">투싼</option>');
+                temp.append(
+                '<option value="투싼하이브리드">투싼하이브리드</option>'
+                );
+                temp.append('<option value="산타페">산타페</option>');
+                temp.append(
+                '<option value="산타페하이브리드">산타페하이브리드</option>'
+                );
+                temp.append('<option value="펠리세이드">펠리세이드</option>');
+            }
+            if (a == "현대" && b == "전기차") {
+                temp.append('<option value="넥쏘">넥쏘</option>');
+                temp.append('<option value="아이오닉5">아이오닉5</option>');
+                temp.append(
+                '<option value="코나일렉트로닉">코나일렉트로닉</option>'
+                );
+            }
+            if (a == "현대" && b == "기타") {
+                temp.append('<option value="스타리아">스타리아</option>');
+            }
+
+            /* 수입차 */
+            if (a == "수입차" && b == "독일") {
+                temp.append('<option value="BMW">BMW</option>');
+                temp.append('<option value="벤츠">벤츠</option>');
+                temp.append('<option value="아우디">아우디</option>');
+            }
+            });
+        });
+
+        
+      });
+      $("select[data-id=c]").change(function () {
+        $("input[name=wr_1]").val(
+          $("select[data-id=a]").val() +
+            "," +
+            $("select[data-id=b]").val() +
+            "," +
+            $("select[data-id=c]").val()
+        );
+      });
+    </script>
+  </body>
+</html>
