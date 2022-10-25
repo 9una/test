@@ -1,37 +1,39 @@
-// (반응형) : 윈도우 사이즈에 따른 말줄임 글자수 변경
+// li안에 여러 줄(p)의 문장을 하나의 줄로 쭉 연결시킴
+$('li').each(function(){
+    const texts = $(this).children('p').text();
+    $(this).html("<p>" + texts + "</p>");
+});
 
-$('li p').each(function(){
-    var length;
-    const text = $(this).text(); //기존 텍스트 저장
-    
-    function lengthChange(){
-        if($(window).width() > 768){
-            length = 80;
-        } else {
-            length = 30;
-        }
+// (반응형) : 윈도우 사이즈에 따른 말줄임 글자수 변경
+var length;
+
+function lengthChange(){
+    if(window.innerWidth > 768){
+        length = 80;
+    } else {
+        length = 20;
     }
+}
+
+const li = document.querySelectorAll('li');
+
+for(let i = 0; i < li.length; i++){
+    const text = li[i].querySelector('p').innerText;
+
     lengthChange();
     
-    $(this).each(function () {
-        if ($(this).text().length >= length) {
-            $(this).text($(this).text().substr(0, length) + "....!!");
-        }
-    });
-    
-    $(window).resize(function(){
+    if(li[i].innerText.length >= length){
+        li[i].innerText = li[i].innerText.substring(0, length) + "... ";
+    }
+
+    window.addEventListener('resize', ()=>{
+        li[i].innerText = text;
+        
         lengthChange();
 
-        $('li p').each(function(){
-            $(this).text(text);
+        if(li[i].innerText.length >= length){
+            li[i].innerText = li[i].innerText.substring(0, length) + "... ";
+        }
 
-            $(this).each(function () {
-                if ($(this).text().length >= length) {
-                    $(this).text($(this).text().substr(0, length) + "....!!");
-                }
-            });
-        
-        })
-        $('h3').text('text 값 : ' + text);
     })
-})
+}
