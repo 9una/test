@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; line-height: 1;}
+        .wrap { padding: 20px; position: relative; width: 80vw; height: 80vh;}
+        .wrap div { position: absolute; transform: translate(-50%, -50%); text-align: right; cursor: pointer;}
+        .wrap > button { position: relative; z-index: 999; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <button type="button" class="add">+ add</button>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
