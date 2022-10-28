@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { font-size: 13px; box-sizing: 0;}
+        ol, ul { list-style: none; margin: 0; padding: 0;}
+        button { height: 30px; padding: 0 15px; font-size: 12px; border: 1px solid yellowgreen; background: #eaff96; border-radius: 3px; cursor: pointer;}
+        button.active {background: yellowgreen;}
+        .wrap { width: 100%; max-width: 600px; margin: 0 auto;}
+        .conts {margin-top: 20px;}
+        .cont {border: 1px solid black;}
+        .cont li {padding: 20px;}
+        .cont li:not(:last-child) {border-bottom: 1px solid black;}
+        .left li:nth-child(even), .right li:nth-child(odd) {text-align: right;}
+        .cont .title span { display: inline-block; padding-bottom: 15px; border-bottom: 1px solid #bbb;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="btns">
+            <button type="button" class="btn">button1</button>
+            <button type="button" class="btn">button2</button>
+        </div>
+        <div class="conts">
+            <ul></ul>
+        </div>
+    </div>
+    
+    <script src="./index.js"></script>
+</body>
+</html>
