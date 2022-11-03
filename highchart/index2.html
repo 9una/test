@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box; text-align: center;}
+        a {color:initial; display:inline-block; text-decoration: none; padding:5px 10px 7px; border:1px solid black; margin-top:20px; font-size:13px; border-radius:5px; line-height: 1;}
+        a:hover {background:#e9e9e9;}
+        .cate {width:100%; max-width:900px; margin:30px auto;}
+        .chart {width:290px; height:290px; border:1px solid black; float:left; margin-top:20px;}
+        .chart:not(:last-child){margin-right:15px;}
+    </style>
+</head>
+<body>
+    <a href="./index.html">CATE1 PAGE</a>
+    <a href="./index2.html">CATE2 PAGE</a>
+    <a href="./index3.html">CATE3 PAGE</a>
+
+    <div class="cate cate2">
+        <h1>cate2</h1>
+        <div class="chart">
+            <div class="chart1" id="chart1"></div>
+        </div>
+        <div class="chart">
+            <div class="chart2" id="chart2"></div>
+        </div>
+        <div class="chart">
+            <div class="chart3" id="chart3"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-more.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+	<script src="./highchart.js"></script>
+</body>
+</html>
