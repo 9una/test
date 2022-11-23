@@ -1,0 +1,39 @@
+@charset "utf-8";
+*{margin:0;padding:0;box-sizing:border-box;}
+label,button{cursor:pointer;}
+
+html,body{
+    display:flex; flex-flow:column nowrap;
+    justify-content:center; align-items:center;
+    gap:1rem;
+    width:100%; min-height:100vh;}
+
+
+.sect_modal{
+    width:100%; height:0;}
+
+.modal{
+    width:350px;
+    position:absolute;
+    left:50%;transform:translateX(-50%);
+    background:#fff;
+    border:2px solid black; border-radius:4px;}
+
+.modal.off {opacity:0; pointer-events: none;}
+
+.pop_1 {top:25%;}
+.pop_2 {top:55%;}
+
+.modal-content{padding:2rem;}
+
+.modal-set{
+    display:flex; justify-content:space-between; align-items:center;
+    position:relative;
+    padding:1em;
+    background:#eaeaec;}
+
+button{
+    padding:.5em 2em;
+    background:#000;
+    border:none;
+    color:#fff;}
